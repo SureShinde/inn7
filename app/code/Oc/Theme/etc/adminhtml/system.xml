@@ -1,0 +1,346 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xs">
+    <system>
+        <tab id="oc_custom_config" translate="label" sortOrder="100">
+            <label>Theme Options</label>
+        </tab>
+		<section id="general_oc" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General</label>
+            <tab>oc_custom_config</tab>
+            <resource>Oc_Theme::config</resource>
+            <group id="main_group" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="direction" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Site Sirection</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Direction</source_model>
+                </field>				
+				<field id="main_color" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Main Color</label>				
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="hover_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hover Color</label>				
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+                <field id="main_font" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Main Font</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Fonts</source_model>
+                </field>
+				<field id="main_font_size" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Basic Font Size</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Size</source_model>
+                </field>
+                <field id="headline_font" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Headlines Font</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Fonts</source_model>
+                </field>
+				<field id="headline_font_size_h1" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Headline Font Size (H1)</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Sizebig</source_model>
+                </field>	
+				<field id="headline_font_size_h2" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Headline Font Size (H2)</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Sizebig</source_model>
+                </field>
+				<field id="headline_font_size_h3" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Headline Font Size (H3)</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Sizebig</source_model>
+                </field>
+				<field id="headlines_color" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Headline Color</label>				
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="buttons_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Buttons Background</label>				
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="buttons_color_hover" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Buttons Hover Background</label>				
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="faqCount" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>FAQ Count</label>								
+				</field>				
+            </group>
+        </section>	
+		<!-- Header -->
+        <section id="header_oc" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Header</label>
+            <tab>oc_custom_config</tab>
+            <resource>Oc_Theme::config</resource>
+			<!-- Header Top -->
+            <group id="header_top" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header Top</label>
+                <field id="top_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="top_background" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>				
+                <field id="top_static_block_1" translate="label" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block id for content</label>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>					                    
+                </field>
+                <field id="top_static_block_1_hide_mobile" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide in Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>						
+                </field>				
+                <field id="top_static_block_2" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block id for content 2</label>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>					                    
+                </field>
+                <field id="top_static_block_2hide_mobile" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide in Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>						
+                </field>				
+                <field id="top_static_block_3" translate="label" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block id for content 3</label>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>					                    
+                </field>
+                <field id="top_static_block_3_hide_mobile" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide in Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>						
+                </field>
+							
+                <field id="top_static_block_4" translate="label" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block id for content 4</label>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>					                    
+                </field>
+                <field id="top_static_block_4_hide_mobile" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide in Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>						
+                </field>			
+                <field id="top_static_block_5" translate="label" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block id for content 5</label>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>					                    
+                </field>
+                <field id="top_static_block_5_hide_mobile" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide in Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/top_enable">1</field>
+                    </depends>						
+                </field>
+				
+            </group>
+			<!-- Header Main -->
+            <group id="header_main" translate="label" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header Main</label>
+                <field id="logo_placment" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logo Placment</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Logoplacment</source_model>
+                </field>
+                <field id="search_text" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Search field placeholder</label>				                    
+                </field>				
+				<field id="sticky_header" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sticky Header</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Sticky</source_model>
+                </field>
+			</group>
+			<!-- Main Menu Desktop -->
+            <group id="main_menu" translate="label" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Desktop Menu</label>
+				<field id="menu_background" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="menu_font_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Font Color</label>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="menu_font_color_hover" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hover and selected Font Color</label>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>
+				<field id="menu_font_size" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Font Size</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Size</source_model>
+                </field>
+				<field id="menu_hover_type" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Menu hover and selected type</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Menuhovertype</source_model>
+                </field>
+				<field id="menu_hover_background_color" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hover and selected Background/lines Color</label>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model> 
+				</field>				
+                <field id="menu_display_icons" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display thumbnail icons</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>					
+                </field>
+				<field id="menu_display_lines" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display separated lines</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>					
+                </field>
+				<field id="menu_display_lines_color" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lines Color</label>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model>
+                    <depends>
+                        <field id="*/*/menu_display_lines">1</field>
+                    </depends>						
+				</field>				
+			</group>
+        </section>
+		<!-- Home -->
+		<section id="oc_home" translate="label" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Home Page</label>
+            <tab>oc_custom_config</tab>
+            <resource>Oc_Theme::config</resource>
+            <group id="home" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="title1" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title 1</label>						
+				</field>
+				<field id="subtitle1" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sub Title 1</label>						
+				</field>				
+				<field id="link1" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Link 1</label>						
+				</field>				
+				<field id="title2" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title 2</label>						
+				</field>
+				<field id="subtitle2" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sub Title 2</label>						
+				</field>				
+				<field id="link2" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Link 2</label>						
+				</field>					
+            </group>
+        </section>
+		<!-- Catalog -->
+		<section id="oc_catalog" translate="label" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Catalog</label>
+            <tab>oc_custom_config</tab>
+            <resource>Oc_Theme::config</resource>
+            <group id="catalog" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="showprices" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show product prices in store?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>			
+                <field id="desktopcount" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Products in a row - Desktop</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Desktopcount</source_model>
+                </field>
+				<field id="tabletcount" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Products in a row - Tablet</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Tabletcount</source_model>
+                </field>
+                <field id="mobilecount" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Products in a row - Mobile</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Mobilecount</source_model>
+                </field>
+                <field id="cartarea" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cart Area</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Cartarea</source_model>
+                </field>
+                <field id="showwish" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show add to Wishlist?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="showquick" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Quick View?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>				
+            </group>
+        </section>
+		<!-- checkout -->
+		<section id="oc_checkout" translate="label" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Checkout</label>
+            <tab>oc_custom_config</tab>
+            <resource>Oc_Theme::config</resource>
+            <group id="checkout" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="minimumshipping" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Free Shipping Minimum</label>						
+				</field>				
+				<field id="continuebtn" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cart proceed to checkout btn text</label>						
+				</field>					
+            </group>
+        </section>
+		<!-- Footer -->
+		<section id="oc_footer" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Footer</label>
+            <tab>oc_custom_config</tab>
+            <resource>Oc_Theme::config</resource>
+            <group id="footer" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="footer_background" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>					
+                    <frontend_model>Oc\Theme\Block\Color</frontend_model>					
+				</field>			
+                <!--<field id="footer_columns" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of columns</label>
+                    <source_model>Oc\Theme\Model\Config\Source\Footercolumns</source_model>
+                </field>-->
+				<field id="column1blocktitle" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 1 Title</label>						
+				</field>
+				<field id="column1blockblock" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 1 Static Block id </label>									
+				</field>
+				<field id="column2blocktitle" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 2 Title</label>											
+				</field>
+				<field id="column2blockblock" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 2 Static Block id </label>											
+				</field>
+				<field id="column3blocktitle" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 3 Title</label>									
+				</field>
+				<field id="column3blockblock" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 3 Static Block id </label>								
+				</field>
+				<field id="column4blocktitle" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 4 Title</label>									
+				</field>
+				<field id="column4blockblock" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 4 Static Block id </label>								
+				</field>
+				<field id="column5blocktitle" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 5 Title</label>									
+				</field>
+				<field id="column5blockblock" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 5 Static Block id </label>								
+				</field>
+				<field id="column6blocktitle" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 6 Title</label>									
+				</field>
+				<field id="column6blockblock" translate="label" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 6 Static Block id </label>								
+				</field>				
+            </group>
+        </section>			
+    </system>
+</config>

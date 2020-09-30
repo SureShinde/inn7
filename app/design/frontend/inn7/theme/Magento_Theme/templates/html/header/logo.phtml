@@ -1,0 +1,13 @@
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt(); ?>
+<a
+    class="logo"
+    href="<?= $block->getUrl('') ?>"
+    title="<?= /* @escapeNotVerified */ $storeName ?>"
+    aria-label="store logo">
+    <img src="<?= /* @escapeNotVerified */ $block->getLogoSrc() ?>"
+         title="<?= $block->escapeHtmlAttr($block->getLogoAlt()) ?>"
+         alt="<?= $block->escapeHtmlAttr($block->getLogoAlt()) ?>"
+         <?= $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+         <?= $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+    />
+</a>

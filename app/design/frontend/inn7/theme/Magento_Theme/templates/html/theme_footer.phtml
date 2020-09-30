@@ -1,0 +1,72 @@
+<?php	
+	$theme_dir = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/direction');
+	$column1blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column1blocktitle');
+	$column1blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column1blockblock');
+	$column2blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column2blocktitle');				
+	$column2blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column2blockblock');
+	$column3blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column3blocktitle');
+	$column3blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column3blockblock');
+	$column4blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column4blocktitle');
+	$column4blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column4blockblock');
+	$column5blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column5blocktitle');
+	$column5blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column5blockblock');
+	$column6blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column6blocktitle');
+	$column6blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column6blockblock');
+?>
+<div class="footer-theme">
+	<div class="footer-top"><div class="container"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-logos')->toHtml(); ?></div></div>
+	<div class="footer-subscribe"><?php echo $this->getChildHtml('subscribe'); ?></div>
+	<div class="footer-main">
+		<div class="container">
+			<?php if($column1blockblock): ?>
+				<div class="footer-item footer1">
+					<?php if($column1blocktitle): ?><div class="title"><?php echo $column1blocktitle; ?></div><?php endif; ?>
+					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column1blockblock)->toHtml(); ?></div>
+				</div>
+			<?php endif; ?>
+			<?php if($column2blockblock): ?>		
+				<div class="footer-item footer2 toggle">
+					<?php if($column2blocktitle): ?><div class="title"><?php echo $column2blocktitle; ?></div><?php endif; ?>
+					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column2blockblock)->toHtml(); ?></div>
+				</div>
+			<?php endif; ?>
+			<?php if($column3blocktitle): ?>
+				<div class="footer-item footer3 toggle">
+					<?php if($column3blocktitle): ?><div class="title"><?php echo $column3blocktitle; ?></div><?php endif; ?>
+					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column3blockblock)->toHtml(); ?></div>
+				</div>
+			<?php endif; ?>
+			<?php if($column4blockblock): ?>
+				<div class="footer-item footer4 toggle">
+					<?php if($column4blocktitle): ?><div class="title"><?php echo $column4blocktitle; ?></div><?php endif; ?>
+					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column4blockblock)->toHtml(); ?></div>
+				</div>
+			<?php endif; ?>
+			<?php if($column5blockblock): ?>				
+				<div class="footer-item footer5 toggle">
+					<?php if($column5blocktitle): ?><div class="title"><?php echo $column5blocktitle; ?></div><?php endif; ?>				
+				</div>
+			<?php endif; ?>			
+			<?php if($column6blockblock): ?>
+				<div class="footer-item footer6 toggle">
+					<?php if($column6blocktitle): ?><div class="title"><?php echo $column6blocktitle; ?></div><?php endif; ?>
+					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column6blockblock)->toHtml(); ?></div>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+	<div class="footer-bottom">
+			<div class="col-md-4 float-right footer-cards no-padding"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-cards')->toHtml(); ?></div>			
+			<div class="col-md-4 float-right copyright-block"><?php echo $this->getChildHtml('copyright-theme'); ?></div>
+			<div class="col-md-4 float-right footer-credit"><a href="https://onlinestore.co.il/ecommerce-website-development/" target="_blank"><img src="<?php echo $block->getViewFileUrl('images/original-concepts.png'); ?>" /></a></div>
+	</div>
+</div>
+<script type="text/javascript">
+	require(['jquery'],function($){
+		if($( window ).width() < 768){
+			$('.footer.content .footer-item.toggle').click(function () {
+				$(this).toggleClass('active');
+			});
+		}
+	});
+</script>

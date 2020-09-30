@@ -1,0 +1,59 @@
+<div class="theme-header">
+	<div class="header content">
+				<div class="col-md-4 col-sm-4 col-4 float-right">
+                        <div class="cart-login">
+                            <?php echo $this->getChildHtml('cat-mini'); ?>
+                            <div class="float-right"><?php echo $this->getChildHtml('minicart'); ?></div>
+                            <div class="header-fav float-right"><a href="<?php echo $block->getBaseUrl(); ?>wishlist/">&nbsp;</a></div>
+                            <div class="header-login float-right">
+                                <div class="login-block" data-bind="scope: 'customer'">
+                                    <!-- ko if: customer().fullname  -->
+                                        <a href="<?php echo $block->getBaseUrl(); ?>customer/account/" data-bind="text: customer().fullname"></a>
+                                    <!-- /ko -->
+                                    <!-- ko ifnot: customer().fullname  -->
+                                    <a href="<?php echo $block->getBaseUrl(); ?>customer/account/" data-bind="i18n:'My Area'"></a>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
+                            <div class="header-static float-right"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-shipping')->toHtml(); ?></div>
+                        </div>
+                    <div class="se-block"><?php echo $this->getChildHtml('topSearch'); ?></div>
+				</div>
+                <div class="col-md-4 col-sm-4 col-4 logo-block float-right">
+                    <?php echo $this->getChildHtml('logo'); ?>
+                </div>
+				<div class="col-md-4 col-sm-4 col-4 float-right">
+                    <div class="currency-block float-left">
+                        <?php //echo $this->getChildHtml('store.settings.language'); ?>
+                        <div class="panel wrapper">
+                            <?php echo $this->getChildHtml('store.settings.currency'); ?>
+                        </div>
+                    </div>
+				</div>
+	</div>
+</div>
+<script type="text/javascript">
+	require(['jquery'],function($){
+		$(document).scroll(function() {
+			if($(window).scrollTop() === 0) {
+				$('.page-header').removeClass('sticky-header');
+			}
+			else if($(window).scrollTop()>150){
+				$('.page-header').addClass('sticky-header');
+			}
+		});
+	});
+</script>
+<script type="text/x-magento-init">
+{
+	"*": {
+		"Magento_Ui/js/core/app": {
+			"components": {
+				"customer": {
+					"component": "Magento_Customer/js/view/customer"
+				}
+			}
+		}
+	}
+}
+</script>

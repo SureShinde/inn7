@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="css/bootstrap.min.css" />
+		<css src="css/custom.css" media="all" />
+        <css src="css/theme-default.css" media="all" />
+	</head>
+    <body>
+		<referenceBlock name="catalog.compare.sidebar" remove="true" />
+		<referenceBlock name="sale.reorder.sidebar" remove="true" />
+		<move element="logo" as="logo" destination="header-theme"/>
+		<move element="minicart" as="minicart" destination="header-theme"/>
+        <move element="store.settings.currency" as="store.settings.currency" destination="header-theme"/>
+		<move element="page.top" destination="header.container" after="-"/>
+		<referenceContainer name="wishlist_sidebar" remove="true" />
+		<move element="breadcrumbs" destination="main" before="-" />
+		<referenceContainer name="head.additional">
+			<block class="Magento\Framework\View\Element\Template" name="gtm.head" before="-" template="Magento_Theme::html/gtm_head.phtml" />
+		</referenceContainer>
+		<referenceContainer name="after.body.start">
+			<block class="Magento\Framework\View\Element\Template" name="gtm.body" before="-" template="Magento_Theme::html/gtm_body.phtml" />
+		</referenceContainer>
+        <referenceContainer name="header.container">
+			<referenceContainer name="header.panel.wrapper" remove="true"/>
+			<referenceContainer name="header-wrapper" remove="true"/>
+			<container name="header-theme-top" as="header-theme-top" htmlClass="header-theme-top" htmlTag="div" before="-">
+				<block class="Magento\Framework\View\Element\Template" name="theme_header_top" ifconfig="header_oc/header_top/top_enable" template="Magento_Theme::html/theme_header_top.phtml"/>
+			</container>
+			<block class="Magento\Framework\View\Element\Template" name="header-theme" as="header-theme" template="Magento_Theme::html/theme_header.phtml" after="header-theme-top">
+				<block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
+			</block>
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+			<referenceContainer name="store_switcher" remove="true"/>
+			<referenceContainer name="copyright" remove="true"/>
+			<referenceContainer name="footer_links" remove="true"/>
+            <container name="footer-theme" as="footer-theme" label="Page Footer" htmlTag="div" htmlClass="footer content">
+				<block class="Magento\Framework\View\Element\Template" name="footer_header" template="Magento_Theme::html/theme_footer.phtml">
+					<block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"/>
+					<block class="Magento\Theme\Block\Html\Footer" name="copyright-theme" as="copyright-theme" before="-" template="Magento_Theme::html/copyright.phtml"/>
+				</block>
+            </container>
+        </referenceContainer>
+		<referenceContainer name="content">
+					<referenceBlock name="authentication-popup" remove="true"/>
+		</referenceContainer>
+    </body>
+</page>

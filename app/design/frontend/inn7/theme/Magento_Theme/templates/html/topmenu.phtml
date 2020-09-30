@@ -1,0 +1,38 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+<nav class="navigation navigation-custom" data-action="navigation">
+	<ul class="main-nav" data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+		<?= /* @escapeNotVerified */ $_menu ?>
+		<?= /* @escapeNotVerified */ $block->getChildHtml() ?>
+	</ul>
+</nav>
+<script type="text/javascript">
+	require(['jquery'],function($){
+		$(document).ready(function() {
+			var lis = $(".navigation .level0.submenu");
+			$(lis).each(function( index ) {
+				var wrap = $(this).find('li#wrap');
+				for(var i = 0; i < wrap.length; i+=6) {
+				  wrap.slice(i, i+6)
+					 .wrapAll("<li class='list_unstyled level1'><ul></ul></li>");
+				}
+			});
+		});
+	});
+</script>

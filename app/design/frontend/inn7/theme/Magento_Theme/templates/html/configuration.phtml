@@ -1,0 +1,72 @@
+<?php
+// Theme configuration
+$main_font = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/main_font');
+$main_color = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/main_color');
+$main_color_hover = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/hover_color');
+$main_font_size = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/main_font_size');
+//Headlines color and font size
+$headlines_color = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/headlines_color');
+$headline_font_size_h1 = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/headline_font_size_h1');
+$headline_font_size_h2 = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/headline_font_size_h2');
+$headline_font_size_h3 = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/headline_font_size_h3');
+// menu configuration
+$menu_background = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_background');
+$menu_font_color = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_font_color');
+$menu_font_color_hover = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_font_color_hover');
+$menu_font_size = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_font_size');
+$menu_hover_type = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_hover_type');
+$menu_hover_background_color = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_hover_background_color');
+$menu_display_lines = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_display_lines');
+$menu_display_lines_color = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/main_menu/menu_display_lines_color');
+// buttons
+$buttons_color = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/buttons_color');
+$buttons_color_hover = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/buttons_color_hover');
+//footer
+$footer_background = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/footer_background');
+?>
+<link href="https://fonts.googleapis.com/css?family=<?php echo $main_font; ?>:300,400,500,600,800&amp;subset=hebrew" rel="stylesheet">
+<!-- theme style -->
+<style>
+	body,.action.primary,input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"],p,.table{color:<?php echo $main_color; ?>;font-size:<?php echo $main_font_size; ?>;font-family: <?php echo $main_font; ?>, sans-serif;}	
+	h1,.h1{color:<?php echo $headlines_color; ?>;font-size:<?php echo $headline_font_size_h1; ?>}
+	h2,.h2{color:<?php echo $headlines_color; ?>;font-size:<?php echo $headline_font_size_h2; ?>;font-weight: 650;}
+	h3,.h3{color:<?php echo $headlines_color; ?>;font-size:<?php echo $headline_font_size_h3; ?>}
+	a,a:visited,.block-collapsible-nav .item a,.navigation .level0 .submenu a{color:<?php echo $main_color; ?>}
+	a:hover,.block-collapsible-nav .item a:hover,.navigation .level0 .submenu a:hover{color:<?php echo $main_color_hover; ?>;}
+	.navigation,.nav-sections{background:<?php echo $menu_background; ?>}
+	.navigation .level0>.level-top{color:<?php echo $menu_font_color; ?>}
+	@media (min-width: 768px){
+		.navigation .level0:hover>.level-top, .navigation .level0.active>.level-top, .navigation .level0.active>.level-top,.navigation .level0:last-child:hover a.level-top{color:<?php echo $menu_font_color_hover; ?>;}
+	}
+	.navigation .level0 .submenu a,.navigation .level0>.level-top{font-size:<?php echo $menu_font_size; ?>}
+	<?php if($menu_hover_type == '0'): ?>
+		@media (min-width: 768px){
+			.navigation li.level0:hover,body.page-products .navigation .level0.active,body.page-products .navigation .level0.has-active{background-color:<?php echo $menu_hover_background_color; ?>!important}
+		}
+		@media (max-width: 767px){
+			.navigation .level0.active{background-color:<?php echo $menu_hover_background_color; ?>!important}
+			.navigation .level0.active>a{color:<?php echo $menu_font_color_hover; ?>!important}	
+		}		
+	<?php elseif($menu_hover_type == '1'): ?>
+		.navigation li.level0{border-bottom:1px solid transparent}
+		.navigation li.level0:hover,.navigation .level0.active{border-bottom:1px solid <?php echo $menu_hover_background_color; ?>}
+	<?php elseif($menu_hover_type == '2'): ?>
+		.navigation li.level0{border-bottom:1px solid transparent}
+		.navigation li.level0:hover,.navigation .level0.active{border-bottom:1px solid <?php echo $menu_hover_background_color; ?>}
+	<?php endif; ?>
+	<?php if($menu_display_lines): ?>
+		.navigation li.level0 a.level-top:before{content:"";background:<?php echo $menu_display_lines_color; ?>;width:1px;height:50px;display:block;position: absolute;top: 0;left:0;    bottom: 0;margin: auto;}		
+		.navigation li.level0:hover a.level-top:before,.navigation li.level0.last a.level-top:before,body.page-products .navigation li.level0.active a.level-top:before,body.page-products .navigation li.level0.has-active a.level-top:before{display:none;}
+	<?php endif; ?>
+	button,.action.primary,.action.primary:hover,button:hover,.review-form .action.submit.primary,button:focus, button:active{background: <?php echo $buttons_color; ?>;border-color:<?php echo $buttons_color; ?>;color: #fff;}
+	.amcart-confirm-buttons .am-btn-right{background-color: <?php echo $buttons_color; ?>!important;}
+	.amcart-confirm-buttons .am-btn-right:hover{background-color: <?php echo $buttons_color_hover; ?>!important;opacity: 1;}
+	button:hover,.action.primary:hover,.review-form .action.submit.primary:hover,.action.primary:focus, .action.primary:active{background: <?php echo $buttons_color_hover; ?>;border-color:<?php echo $buttons_color_hover; ?>}
+	.page-footer{background: <?php echo $footer_background; ?>;}
+	@media (min-width: 1024px){
+		body h1, body .h1{font-size: 1.563vw;}
+		body h2, body .h2{font-size:1.458vw;}
+		body, .action.primary, input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"], p, .table{font-size: 0.885vw;}		
+		.navigation li.level0 a.level-top:before{height: 2.604vw;}
+	}
+</style>

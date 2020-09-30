@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,800&subset=hebrew');
+body, .action.primary, input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"], p, .table{color: #222222;font-size: 15px;font-family: Roboto, sans-serif;}
+._keyfocus *:focus, input:not([disabled]):focus, textarea:not([disabled]):focus, select:not([disabled]):focus{box-shadow: none;}
+.header.content a:hover{text-decoration:none}
+.logo-block{text-align: center;}
+.logo{    float: none;display: inline-block;    margin: 0;}
+.logo img{    width: auto;}
+.header-fav a {
+    display: block;
+    background: url(../images/wish.png) center no-repeat;
+    padding-top: 0;
+    font-weight: 600;
+    position: relative;
+    width: 27px;
+    text-align: center;
+    height: 30px;
+}
+.minicart-wrapper .action.showcart {
+    background: url(../images/cart.png) center no-repeat;
+    font-weight: 600;
+    padding-top: 0;
+    display: block;
+    width: 27px;
+    height: 30px;
+}
+.minicart-wrapper{color: #222222;}
+.minicart-wrapper .action.showcart:before,.minicart-wrapper .action.showcart.active:before{display:none}
+.page-header .switcher{    margin-left: 0;
+    margin-right: 0;    font-size: 12px;}
+.page-header .panel.wrapper .switcher .options ul.dropdown {
+    right: auto;
+    left: 0;
+}
+.page-header .panel.wrapper .switcher .options ul.dropdown:before {
+    left: 10px;
+    right: auto;
+}
+.page-header .panel.wrapper .switcher .options ul.dropdown:after {
+    left: 9px;
+    right: auto;
+}
+.page-header .panel.wrapper {
+    border-bottom: none;
+    background-color: transparent;
+}
+.login-block {
+    display: block;
+    background: url(../images/user.png) 0 0 no-repeat;
+    padding-top: 5px;
+    font-weight: 600;
+    position: relative;
+    width: auto;
+    text-align: center;
+    height: 30px;
+    padding-left: 30px;
+    margin-right: 20px;
+}
+.block-search .action.search.disabled, .block-search .action.search[disabled], fieldset[disabled] .block-search .action.search,.block-search .action.search:before{opacity: 1;}
+.nav-sections,.navigation{background: transparent;}
+.navigation ul {
+    padding: 0;text-align: center;
+}
+.navigation .level0{    margin: 0;}
+.navigation{    max-width: 100%;}

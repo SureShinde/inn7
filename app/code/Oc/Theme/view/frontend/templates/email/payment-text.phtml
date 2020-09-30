@@ -1,0 +1,4 @@
+<?php $payment =  $this->getData('order')->getPayment()->getMethodInstance()->getCode(); ?>
+<?php if($payment == 'cardcom'): ?>
+    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('email_payment_text')->toHtml(); ?>
+<?php endif; ?>

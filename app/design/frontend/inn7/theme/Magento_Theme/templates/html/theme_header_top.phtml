@@ -1,0 +1,21 @@
+<?php
+$top_background = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_background');
+$top_static_block_1 = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_1');
+$top_static_block_2 = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_2');
+$top_static_block_3 = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_3');
+$top_static_block_4 = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_4');
+$top_static_block_5 = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_5');
+$top_static_block_1_hide_mobile = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_1_hide_mobile');
+$top_static_block_2_hide_mobile = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_2_hide_mobile');
+$top_static_block_3_hide_mobile = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_3_hide_mobile');
+$top_static_block_4_hide_mobile = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_4_hide_mobile');
+$top_static_block_5_hide_mobile = $this->helper('Oc\Theme\Helper\Data')->getConfig('header_oc/header_top/top_static_block_5_hide_mobile');
+?>
+<div class="header-top" style="background-color:<?php echo $top_background; ?>">
+	<div class="header content">
+		<div class="row">	
+			<div class="item links col-md-6 col-lg-6 item-1"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($top_static_block_1)->toHtml(); ?></div>
+			<div class="item links col-md-6 col-lg-6 item-2"><div class="inner"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($top_static_block_2)->toHtml(); ?></div></div>
+		</div>
+	</div>
+</div>

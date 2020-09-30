@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Catalog:etc/catalog_attributes.xsd">
+    <group name="quote_item">
+        <attribute name="capsolot"/>
+		<attribute name="kapliot"/>
+		<attribute name="kmosot"/>
+		<attribute name="lacsaniot"/>
+		<attribute name="manot"/>
+		<attribute name="tblivt"/>
+		<attribute name="units"/>
+		<attribute name="gram"/>
+		<attribute name="ml"/>
+		<attribute name="manufacturer"/>
+    </group>
+</config>

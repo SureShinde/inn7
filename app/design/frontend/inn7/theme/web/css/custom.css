@@ -1,0 +1,47 @@
+.page-header{background: #282828;color: #fff;}
+.header.content{    max-width: 100%;}
+.header.content a{    color: #fff;
+    font-weight: normal;}
+.cart-login{float: right;
+    width: 100%;
+    margin-bottom: 15px;}
+.login-block a{font-size: 14px;
+    text-transform: uppercase;}
+.header-static{    margin-top: 8px;
+    margin-right: 30px;}
+.header-static p{margin: 0;
+    color: #fff;
+    font-size: 12px;}
+currency-block{    margin-top: 10px;}
+.block-search input[type="text"]{background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;color: #fff;font-size: 14px;    padding: 0;}
+.block-search input[type="text"]::-webkit-input-placeholder {
+    color: #fff;
+    font-family: Roboto, sans-serifif;
+}
+.block-search input[type="text"]:-moz-placeholder {
+    color: #fff;
+    font-family: Roboto, sans-serif;
+}
+.block-search input[type="text"]::-moz-placeholder {
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    opacity: 1;
+}
+.block-search input[type="text"]:-ms-input-placeholder {
+    color: #fff;
+    font-family: Roboto, sans-serif;
+}
+.se-block{    position: absolute;
+    bottom: -40px;
+    right: 15px;}
+.block-search .action.search:before{color: #fff;}
+.navigation .level0>.level-top{    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;color: #fff;line-height: normal;padding: 10px 25px;border: 1px solid transparent;
+    border-bottom: none;}
+.navigation .level0>.level-top:hover, .navigation .level0>.level-top.ui-state-focus{    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;color: #fff;line-height: normal;border-color:#fff}
+.nav-sections{    margin-bottom: 0;    margin-top: 15px;}
