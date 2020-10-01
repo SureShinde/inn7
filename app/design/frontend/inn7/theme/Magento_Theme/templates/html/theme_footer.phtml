@@ -1,8 +1,8 @@
-<?php	
+<?php
 	$theme_dir = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/direction');
 	$column1blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column1blocktitle');
 	$column1blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column1blockblock');
-	$column2blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column2blocktitle');				
+	$column2blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column2blocktitle');
 	$column2blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column2blockblock');
 	$column3blocktitle = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column3blocktitle');
 	$column3blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column3blockblock');
@@ -14,7 +14,6 @@
 	$column6blockblock = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_footer/footer/column6blockblock');
 ?>
 <div class="footer-theme">
-	<div class="footer-top"><div class="container"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-logos')->toHtml(); ?></div></div>
 	<div class="footer-subscribe"><?php echo $this->getChildHtml('subscribe'); ?></div>
 	<div class="footer-main">
 		<div class="container">
@@ -24,7 +23,7 @@
 					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column1blockblock)->toHtml(); ?></div>
 				</div>
 			<?php endif; ?>
-			<?php if($column2blockblock): ?>		
+			<?php if($column2blockblock): ?>
 				<div class="footer-item footer2 toggle">
 					<?php if($column2blocktitle): ?><div class="title"><?php echo $column2blocktitle; ?></div><?php endif; ?>
 					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column2blockblock)->toHtml(); ?></div>
@@ -42,11 +41,12 @@
 					<div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column4blockblock)->toHtml(); ?></div>
 				</div>
 			<?php endif; ?>
-			<?php if($column5blockblock): ?>				
+			<?php if($column5blockblock): ?>
 				<div class="footer-item footer5 toggle">
-					<?php if($column5blocktitle): ?><div class="title"><?php echo $column5blocktitle; ?></div><?php endif; ?>				
+					<?php if($column5blocktitle): ?><div class="title"><?php echo $column5blocktitle; ?></div><?php endif; ?>
+                    <div class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($column5blockblock)->toHtml(); ?></div>
 				</div>
-			<?php endif; ?>			
+			<?php endif; ?>
 			<?php if($column6blockblock): ?>
 				<div class="footer-item footer6 toggle">
 					<?php if($column6blocktitle): ?><div class="title"><?php echo $column6blocktitle; ?></div><?php endif; ?>
@@ -56,9 +56,11 @@
 		</div>
 	</div>
 	<div class="footer-bottom">
-			<div class="col-md-4 float-right footer-cards no-padding"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-cards')->toHtml(); ?></div>			
-			<div class="col-md-4 float-right copyright-block"><?php echo $this->getChildHtml('copyright-theme'); ?></div>
-			<div class="col-md-4 float-right footer-credit"><a href="https://onlinestore.co.il/ecommerce-website-development/" target="_blank"><img src="<?php echo $block->getViewFileUrl('images/original-concepts.png'); ?>" /></a></div>
+        <div class="container">
+            <div class="col-md-4 float-right copyright-block"><?php echo $this->getChildHtml('copyright-theme'); ?></div>
+            <div class="col-md-4 float-right footer-cards no-padding"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-cards')->toHtml(); ?></div>
+            <div class="col-md-4 float-right footer-credit"><a href="https://onlinestore.co.il/ecommerce-website-development/" target="_blank"><span>POWERED BY</span><img src="<?php echo $block->getViewFileUrl('images/original-concepts.png'); ?>" /></a></div>
+        </div>
 	</div>
 </div>
 <script type="text/javascript">

@@ -1,0 +1,35 @@
+<?php
+$path = $_SERVER['REQUEST_URI'];
+$urlP = strtok($path, '?');
+$Cpath = str_replace('/', '', $urlP);
+?>
+<div class="side_menu">
+	<div class="menu-title"><?php echo __('Additional info'); ?></div>
+	<div class="side_menu_content">
+		<div class="mat-links-box">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('static_bar')->toHtml(); ?>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	require(['jquery'],function($){
+		$( document ).ready(function() {
+			$( ".side_menu li" ).each(function( index ) {
+				var classN = $(this).attr('class');
+				if('<?php echo $Cpath; ?>' == classN)
+					$(this).addClass('active');
+			});
+		});
+		$('.side_menu .menu-title').click(function() {
+			var subEL = $(this).next('.side_menu_content');
+			if(subEL.is(':hidden')){
+			subEL.slideDown();
+				$(this).addClass('active');				
+			}
+			else{
+				subEL.slideUp();
+				$(this).removeClass('active');		
+			}	
+		});
+	});	
+</script>
