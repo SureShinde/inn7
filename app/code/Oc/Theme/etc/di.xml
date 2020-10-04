@@ -1,11 +1,4 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 	<preference for="Magento\Theme\Block\Html\Topmenu" type="Oc\Theme\Block\Html\Topmenu" />
-	<!--<type name="\Magento\Customer\Controller\Account\LoginPost"><plugin name="oc_theme_loginpostplugin" type="\Oc\Theme\Plugin\LoginPostPlugin" sortOrder="1" /></type>-->
-	<!--<type name="Magento\Customer\Controller\Account\LoginPost">
-		<plugin name="CustomerLoginRedirectPlugin" type="Oc\Theme\Plugin\LoginPost" sortOrder="10" />
-	</type>-->
-	<!--<type name="Magento\Checkout\CustomerData\Cart">
-        <plugin name="cartPrivateDataDiscount" type="Oc\Theme\Plugin\Checkout\CustomerData\Cart"/>
-    </type>-->
 </config>

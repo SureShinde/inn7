@@ -133,7 +133,7 @@ CREATE TABLE `admin_user` (
 
 LOCK TABLES `admin_user` WRITE;
 /*!40000 ALTER TABLE `admin_user` DISABLE KEYS */;
-INSERT INTO `admin_user` VALUES (1,'Eran','Greenwald','eran@originalconcepts.co.il','eran','5c2f458ee32c5ba82cd2c837c66af53a8213144a533fe9433b1a099d1445fbed:dF3btSPFzFx5ZrFur7CWgrRp7ZYvxBAy:1','2020-09-25 07:14:24','2020-10-01 13:01:34','2020-10-01 13:01:34',8,0,1,'{\"configState\":{\"general_country\":\"0\",\"dev_debug\":\"1\",\"dev_static\":\"1\",\"dev_front_end_development_workflow\":\"0\",\"dev_restrict\":\"0\",\"dev_template\":\"0\",\"dev_translate_inline\":\"0\",\"dev_js\":\"0\",\"dev_css\":\"0\",\"dev_image\":\"0\",\"dev_caching\":\"0\",\"dev_grid\":\"0\",\"currency_options\":\"1\",\"currency_fixerio\":\"1\",\"currency_currencyconverterapi\":\"1\",\"currency_import\":\"1\",\"catalog_seo\":\"0\",\"catalog_fields_masks\":\"0\",\"catalog_frontend\":\"0\",\"catalog_review\":\"0\",\"catalog_productalert\":\"0\",\"catalog_productalert_cron\":\"0\",\"catalog_placeholder\":\"0\",\"catalog_recently_products\":\"0\",\"catalog_product_video\":\"0\",\"catalog_price\":\"0\",\"catalog_layered_navigation\":\"0\",\"catalog_search\":\"0\",\"catalog_navigation\":\"0\",\"catalog_downloadable\":\"0\",\"catalog_custom_options\":\"0\",\"oc_footer_footer\":\"1\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL);
+INSERT INTO `admin_user` VALUES (1,'Eran','Greenwald','eran@originalconcepts.co.il','eran','5c2f458ee32c5ba82cd2c837c66af53a8213144a533fe9433b1a099d1445fbed:dF3btSPFzFx5ZrFur7CWgrRp7ZYvxBAy:1','2020-09-25 07:14:24','2020-10-04 11:31:13','2020-10-04 11:31:13',10,0,1,'{\"configState\":{\"general_country\":\"0\",\"dev_debug\":\"1\",\"dev_static\":\"1\",\"dev_front_end_development_workflow\":\"0\",\"dev_restrict\":\"0\",\"dev_template\":\"0\",\"dev_translate_inline\":\"0\",\"dev_js\":\"0\",\"dev_css\":\"0\",\"dev_image\":\"0\",\"dev_caching\":\"0\",\"dev_grid\":\"0\",\"currency_options\":\"1\",\"currency_fixerio\":\"1\",\"currency_currencyconverterapi\":\"1\",\"currency_import\":\"1\",\"catalog_seo\":\"0\",\"catalog_fields_masks\":\"0\",\"catalog_frontend\":\"0\",\"catalog_review\":\"0\",\"catalog_productalert\":\"0\",\"catalog_productalert_cron\":\"0\",\"catalog_placeholder\":\"0\",\"catalog_recently_products\":\"0\",\"catalog_product_video\":\"0\",\"catalog_price\":\"0\",\"catalog_layered_navigation\":\"0\",\"catalog_search\":\"0\",\"catalog_navigation\":\"0\",\"catalog_downloadable\":\"0\",\"catalog_custom_options\":\"0\",\"oc_footer_footer\":\"1\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `admin_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +180,7 @@ CREATE TABLE `admin_user_session` (
   KEY `ADMIN_USER_SESSION_SESSION_ID` (`session_id`),
   KEY `ADMIN_USER_SESSION_USER_ID` (`user_id`),
   CONSTRAINT `ADMIN_USER_SESSION_USER_ID_ADMIN_USER_USER_ID` FOREIGN KEY (`user_id`) REFERENCES `admin_user` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `admin_user_session` (
 
 LOCK TABLES `admin_user_session` WRITE;
 /*!40000 ALTER TABLE `admin_user_session` DISABLE KEYS */;
-INSERT INTO `admin_user_session` VALUES (1,'rbunl10c584rirokrto2hp6fql',1,1,'2020-09-25 07:29:33','2020-09-25 07:45:01','::1'),(2,'ufcii252a45qgmoo8egrj7j5u0',1,1,'2020-09-29 08:46:34','2020-09-29 10:06:06','::1'),(3,'evjflqpohh2kk76sllg7p6g5bq',1,1,'2020-09-29 10:49:09','2020-09-29 10:49:50','::1'),(4,'hvaubn2k3iv1sd3bhjtc0edtop',1,1,'2020-09-30 11:57:19','2020-09-30 12:42:36','::1'),(5,'gon6evm8hdbm22au6utfik676n',1,1,'2020-09-30 13:42:25','2020-09-30 13:43:04','::1'),(6,'rng2jl9p68jjqsvj3la0id6jpu',1,1,'2020-09-30 14:13:51','2020-09-30 14:14:20','::1'),(7,'bdq104ts51736rtm8tl1sc75m0',1,1,'2020-10-01 11:18:48','2020-10-01 12:32:23','::1'),(8,'2dl3cb4gf9sgv09jp5io4q3dni',1,1,'2020-10-01 13:01:38','2020-10-01 13:24:23','::1');
+INSERT INTO `admin_user_session` VALUES (1,'rbunl10c584rirokrto2hp6fql',1,1,'2020-09-25 07:29:33','2020-09-25 07:45:01','::1'),(2,'ufcii252a45qgmoo8egrj7j5u0',1,1,'2020-09-29 08:46:34','2020-09-29 10:06:06','::1'),(3,'evjflqpohh2kk76sllg7p6g5bq',1,1,'2020-09-29 10:49:09','2020-09-29 10:49:50','::1'),(4,'hvaubn2k3iv1sd3bhjtc0edtop',1,1,'2020-09-30 11:57:19','2020-09-30 12:42:36','::1'),(5,'gon6evm8hdbm22au6utfik676n',1,1,'2020-09-30 13:42:25','2020-09-30 13:43:04','::1'),(6,'rng2jl9p68jjqsvj3la0id6jpu',1,1,'2020-09-30 14:13:51','2020-09-30 14:14:20','::1'),(7,'bdq104ts51736rtm8tl1sc75m0',1,1,'2020-10-01 11:18:48','2020-10-01 12:32:23','::1'),(8,'2dl3cb4gf9sgv09jp5io4q3dni',1,1,'2020-10-01 13:01:38','2020-10-01 13:24:23','::1'),(9,'avnomm9jtuv2bm53slaffvd7og',1,1,'2020-10-04 09:55:54','2020-10-04 10:40:07','::1'),(10,'527gplf96ak90fr6fjpjjptpej',1,1,'2020-10-04 11:31:18','2020-10-04 13:09:11','::1');
 /*!40000 ALTER TABLE `admin_user_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -724,7 +724,7 @@ CREATE TABLE `catalog_category_entity` (
   PRIMARY KEY (`entity_id`),
   KEY `CATALOG_CATEGORY_ENTITY_LEVEL` (`level`),
   KEY `CATALOG_CATEGORY_ENTITY_PATH` (`path`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Catalog Category Table';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Catalog Category Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -733,7 +733,7 @@ CREATE TABLE `catalog_category_entity` (
 
 LOCK TABLES `catalog_category_entity` WRITE;
 /*!40000 ALTER TABLE `catalog_category_entity` DISABLE KEYS */;
-INSERT INTO `catalog_category_entity` VALUES (1,3,0,'2020-09-25 07:14:04','2020-09-30 12:29:41','1',0,0,4),(2,3,1,'2020-09-25 07:14:04','2020-09-30 12:29:41','1/2',1,1,3),(3,3,2,'2020-09-30 12:26:36','2020-09-30 12:26:36','1/2/3',1,2,0),(4,3,2,'2020-09-30 12:28:36','2020-09-30 12:28:36','1/2/4',2,2,0),(5,3,2,'2020-09-30 12:29:41','2020-09-30 12:29:42','1/2/5',3,2,0);
+INSERT INTO `catalog_category_entity` VALUES (1,3,0,'2020-09-25 07:14:04','2020-10-04 09:58:22','1',0,0,5),(2,3,1,'2020-09-25 07:14:04','2020-10-04 09:58:22','1/2',1,1,4),(3,3,2,'2020-09-30 12:26:36','2020-10-04 09:58:22','1/2/3',1,2,1),(4,3,2,'2020-09-30 12:28:36','2020-09-30 12:28:36','1/2/4',2,2,0),(5,3,2,'2020-09-30 12:29:41','2020-09-30 12:29:42','1/2/5',3,2,0),(6,3,3,'2020-10-04 09:58:22','2020-10-04 09:58:22','1/2/3/6',1,3,0);
 /*!40000 ALTER TABLE `catalog_category_entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -824,7 +824,7 @@ CREATE TABLE `catalog_category_entity_int` (
   CONSTRAINT `CATALOG_CATEGORY_ENTITY_INT_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_CTGR_ENTT_INT_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_CTGR_ENTT_INT_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Catalog Category Integer Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='Catalog Category Integer Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -833,7 +833,7 @@ CREATE TABLE `catalog_category_entity_int` (
 
 LOCK TABLES `catalog_category_entity_int` WRITE;
 /*!40000 ALTER TABLE `catalog_category_entity_int` DISABLE KEYS */;
-INSERT INTO `catalog_category_entity_int` VALUES (1,69,0,1,1),(2,46,0,2,1),(3,69,0,2,1),(4,46,0,3,1),(5,54,0,3,1),(6,69,0,3,1),(7,70,0,3,0),(8,71,0,3,0),(9,46,0,4,1),(10,54,0,4,1),(11,69,0,4,1),(12,70,0,4,0),(13,71,0,4,0),(14,46,0,5,1),(15,54,0,5,1),(16,69,0,5,1),(17,70,0,5,0),(18,71,0,5,0);
+INSERT INTO `catalog_category_entity_int` VALUES (1,69,0,1,1),(2,46,0,2,1),(3,69,0,2,1),(4,46,0,3,1),(5,54,0,3,1),(6,69,0,3,1),(7,70,0,3,0),(8,71,0,3,0),(9,46,0,4,1),(10,54,0,4,1),(11,69,0,4,1),(12,70,0,4,0),(13,71,0,4,0),(14,46,0,5,1),(15,54,0,5,1),(16,69,0,5,1),(17,70,0,5,0),(18,71,0,5,0),(19,46,0,6,1),(20,54,0,6,1),(21,69,0,6,1),(22,70,0,6,0),(23,71,0,6,0);
 /*!40000 ALTER TABLE `catalog_category_entity_int` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -891,7 +891,7 @@ CREATE TABLE `catalog_category_entity_varchar` (
   CONSTRAINT `CATALOG_CATEGORY_ENTITY_VARCHAR_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_CTGR_ENTT_VCHR_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_CTGR_ENTT_VCHR_ENTT_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='Catalog Category Varchar Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Catalog Category Varchar Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -900,7 +900,7 @@ CREATE TABLE `catalog_category_entity_varchar` (
 
 LOCK TABLES `catalog_category_entity_varchar` WRITE;
 /*!40000 ALTER TABLE `catalog_category_entity_varchar` DISABLE KEYS */;
-INSERT INTO `catalog_category_entity_varchar` VALUES (1,45,0,1,'Root Catalog'),(2,45,0,2,'Default Category'),(3,52,0,2,'PRODUCTS'),(4,45,0,3,'Men'),(5,52,0,3,'PRODUCTS'),(6,119,0,3,'men'),(7,120,0,3,'men'),(8,45,0,4,'Women'),(9,52,0,4,'PRODUCTS'),(10,119,0,4,'women'),(11,120,0,4,'women'),(12,45,0,5,'Sale'),(13,52,0,5,'PRODUCTS'),(14,119,0,5,'sale'),(15,120,0,5,'sale');
+INSERT INTO `catalog_category_entity_varchar` VALUES (1,45,0,1,'Root Catalog'),(2,45,0,2,'Default Category'),(3,52,0,2,'PRODUCTS'),(4,45,0,3,'Men'),(5,52,0,3,'PRODUCTS'),(6,119,0,3,'men'),(7,120,0,3,'men'),(8,45,0,4,'Women'),(9,52,0,4,'PRODUCTS'),(10,119,0,4,'women'),(11,120,0,4,'women'),(12,45,0,5,'Sale'),(13,52,0,5,'PRODUCTS'),(14,119,0,5,'sale'),(15,120,0,5,'sale'),(16,45,0,6,'Clothing'),(17,52,0,6,'PRODUCTS'),(18,119,0,6,'clothing'),(19,120,0,6,'men/clothing');
 /*!40000 ALTER TABLE `catalog_category_entity_varchar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3893,7 +3893,7 @@ CREATE TABLE `cms_block` (
   `is_active` smallint(6) NOT NULL DEFAULT 1 COMMENT 'Is Block Active',
   PRIMARY KEY (`block_id`),
   FULLTEXT KEY `CMS_BLOCK_TITLE_IDENTIFIER_CONTENT` (`title`,`identifier`,`content`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='CMS Block Table';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='CMS Block Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3902,7 +3902,7 @@ CREATE TABLE `cms_block` (
 
 LOCK TABLES `cms_block` WRITE;
 /*!40000 ALTER TABLE `cms_block` DISABLE KEYS */;
-INSERT INTO `cms_block` VALUES (1,'header shipping','header-shipping','<p>FREE SHIPPING OVER 300€ !</p>','2020-09-30 12:00:21','2020-09-30 12:00:21',1),(2,'newsletter title - English','newsletter-title','<h3>INN7 NEWSLETTER</h3>\r\n<p>Receive 10% OFF your next order</p>','2020-10-01 11:33:07','2020-10-01 11:33:07',1),(3,'Footer Logo - EN','footer-logo','<p><img src=\"{{media url=&quot;wysiwyg/footer-logo.png&quot;}}\" alt=\"\"></p>\r\n<p>Ben Yehuda 177, Tel aviv</p>\r\n<p>Shabazi 40, Tel aviv</p>\r\n<p>Dizingof 220, Tel aviv</p>\r\n<ul>\r\n<li><a href=\"https://www.facebook.com/INN7.F\" target=\"_blank\" rel=\"noopener\"><img src=\"{{media url=&quot;wysiwyg/footer-face.png&quot;}}\" alt=\"\"></a></li>\r\n<li><a href=\"https://www.instagram.com/inn7/\" target=\"_blank\" rel=\"noopener\"><img src=\"{{media url=&quot;wysiwyg/footer-insta.png&quot;}}\" alt=\"\"></a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:16:13',1),(4,'Footer contact - EN','footer-contact','<ul>\r\n<li>by phone</li>\r\n<li><a href=\"tel:+972-036201022\" rel=\"noopener\">+972-036201022</a></li>\r\n<li>by email</li>\r\n<li><a href=\"mailto:info@inn7fashion.com\" rel=\"noopener\">info@inn7fashion.com</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:25:17',1),(5,'Footer service - EN','footer-service','<ul>\r\n<li><a href=\"/\">Orders &amp; Shipping</a></li>\r\n<li><a href=\"/\">Returns &amp; Refunds</a></li>\r\n<li><a href=\"/\">FAQs</a></li>\r\n<li><a href=\"/\">Terms &amp; Conditions</a></li>\r\n<li><a href=\"/\">Privacy Policy</a></li>\r\n<li><a href=\"/\">Contact Us</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:28:17',1),(6,'Footer about - EN','footer-about','<ul>\r\n<li><a href=\"/about-us\">About Us</a></li>\r\n<li><a href=\"/designer\">Designers</a></li>\r\n<li><a href=\"/\">INN 7 App</a></li>\r\n<li><a href=\"/\">Size Gide</a></li>\r\n<li><a href=\"/\">Store Locator</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:30:48',1),(7,'Footer account  - EN','footer-account','<ul>\r\n<li><a href=\"/\">My Account</a></li>\r\n<li><a href=\"/\">Orders History</a></li>\r\n<li><a href=\"/wishlist\">WISHLIST</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:31:48',1),(8,'כרטיסי אשראי בפוטר','footer-cards','<p><img src=\"{{media url=&quot;wysiwyg/footer-cards.png&quot;}}\" alt=\"\"></p>','2020-10-01 13:07:10','2020-10-01 13:07:10',1);
+INSERT INTO `cms_block` VALUES (1,'header shipping','header-shipping','<p>FREE SHIPPING OVER 300€ !</p>','2020-09-30 12:00:21','2020-09-30 12:00:21',1),(2,'newsletter title - English','newsletter-title','<h3>INN7 NEWSLETTER</h3>\r\n<p>Receive 10% OFF your next order</p>','2020-10-01 11:33:07','2020-10-01 11:33:07',1),(3,'Footer Logo - EN','footer-logo','<p><img src=\"{{media url=&quot;wysiwyg/footer-logo.png&quot;}}\" alt=\"\"></p>\r\n<p>Ben Yehuda 177, Tel aviv</p>\r\n<p>Shabazi 40, Tel aviv</p>\r\n<p>Dizingof 220, Tel aviv</p>\r\n<ul>\r\n<li><a href=\"https://www.facebook.com/INN7.F\" target=\"_blank\" rel=\"noopener\"><img src=\"{{media url=&quot;wysiwyg/footer-face.png&quot;}}\" alt=\"\"></a></li>\r\n<li><a href=\"https://www.instagram.com/inn7/\" target=\"_blank\" rel=\"noopener\"><img src=\"{{media url=&quot;wysiwyg/footer-insta.png&quot;}}\" alt=\"\"></a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:16:13',1),(4,'Footer contact - EN','footer-contact','<ul>\r\n<li>by phone</li>\r\n<li><a href=\"tel:+972-036201022\" rel=\"noopener\">+972-036201022</a></li>\r\n<li>by email</li>\r\n<li><a href=\"mailto:info@inn7fashion.com\" rel=\"noopener\">info@inn7fashion.com</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:25:17',1),(5,'Footer service - EN','footer-service','<ul>\r\n<li><a href=\"/\">Orders &amp; Shipping</a></li>\r\n<li><a href=\"/\">Returns &amp; Refunds</a></li>\r\n<li><a href=\"/\">FAQs</a></li>\r\n<li><a href=\"/\">Terms &amp; Conditions</a></li>\r\n<li><a href=\"/\">Privacy Policy</a></li>\r\n<li><a href=\"/\">Contact Us</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:28:17',1),(6,'Footer about - EN','footer-about','<ul>\r\n<li><a href=\"/about-us\">About Us</a></li>\r\n<li><a href=\"/designer\">Designers</a></li>\r\n<li><a href=\"/\">INN 7 App</a></li>\r\n<li><a href=\"/\">Size Gide</a></li>\r\n<li><a href=\"/\">Store Locator</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:30:48',1),(7,'Footer account  - EN','footer-account','<ul>\r\n<li><a href=\"/\">My Account</a></li>\r\n<li><a href=\"/\">Orders History</a></li>\r\n<li><a href=\"/wishlist\">WISHLIST</a></li>\r\n</ul>','2020-10-01 12:07:32','2020-10-01 12:31:48',1),(8,'כרטיסי אשראי בפוטר','footer-cards','<p><img src=\"{{media url=&quot;wysiwyg/footer-cards.png&quot;}}\" alt=\"\"></p>','2020-10-01 13:07:10','2020-10-01 13:07:10',1),(9,'תת תפריט גברים - אנגלית','cat_3_menu','<table style=\"border-collapse: collapse; width: 99.9419%; height: 592px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 284px;\">\r\n<p><strong><a href=\"/\">VIEWL ALL MEN</a></strong></p>\r\n<p><strong><a href=\"/\">NEW ARRIVALS</a></strong></p>\r\n<p>&nbsp;</p>\r\n<p><a href=\"/\"><img src=\"{{media url=&quot;wysiwyg/menu-men.jpg&quot;}}\" alt=\"\"></a></p>\r\n</td>\r\n<td style=\"width: 284px;\">\r\n<p><strong>CLOTHING</strong></p>\r\n<p><em><a href=\"/\">VIEW ALL</a></em></p>\r\n<p><a href=\"/\">Blazers</a></p>\r\n<p><a href=\"/\">Cardigans</a></p>\r\n<p><a href=\"/\">Coats</a></p>\r\n<p><a href=\"/\">Denim</a></p>\r\n<p><a href=\"/\">Jackets</a></p>\r\n<p><a href=\"/\">Knitwear</a></p>\r\n<p><a href=\"/\">Leather Jackets</a></p>\r\n<p><a href=\"/\">Pants</a></p>\r\n<p><a href=\"/\">Shirts</a></p>\r\n<p><a href=\"/\">Shorts</a></p>\r\n<p><a href=\"/\">Sweatshirts</a></p>\r\n<p><a href=\"/\">Tank tops</a></p>\r\n<p><a href=\"/\">T-shirts</a></p>\r\n<p><a href=\"/\">Vests</a></p>\r\n<p><a href=\"/\">Overalls</a></p>\r\n<p>&nbsp;</p>\r\n</td>\r\n<td style=\"width: 284px;\">\r\n<p><strong>DESIGNER</strong></p>\r\n<p><em><a href=\"/\">VIEW ALL</a></em></p>\r\n<p><a href=\"/\">10SEI0OTTO</a></p>\r\n<p><a href=\"/\">139DEC</a></p>\r\n<p><a href=\"/\">11 BY BORIS BIDJAN</a></p>\r\n<p><a href=\"/\">SABERI</a></p>\r\n<p><a href=\"/\">AVANT TOI</a></p>\r\n<p><a href=\"/\">BORIS BIDJAN</a></p>\r\n<p><a href=\"/\">SABERI</a></p>\r\n<p><a href=\"/\">DANIELE BASTA</a></p>\r\n<p><a href=\"/\">ENRI MARS</a></p>\r\n<p><a href=\"/\">FAGASSENT</a></p>\r\n<p><a href=\"/\">GOTI</a></p>\r\n<p><a href=\"/\">GUIDI</a></p>\r\n<p><a href=\"/\">ISAAC SELLAM</a></p>\r\n<p><a href=\"/\">MARSÈLL</a></p>\r\n<p><a href=\"/\">Maya Noah</a></p>\r\n<p><a href=\"/\">OXS RUBBER SOUL</a></p>\r\n</td>\r\n<td style=\"width: 284px;\">\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><a href=\"/\">POÈME BOHÉMIEN</a></p>\r\n<p><a href=\"/\">RICK OWENS</a></p>\r\n<p><a href=\"/\">RIGARDS</a></p>\r\n<p><a href=\"/\">EYEWEAR</a></p>\r\n<p><a href=\"/\">RtA</a></p>\r\n<p><a href=\"/\">THOM KROM</a></p>\r\n<p><a href=\"/\">THE LAST</a></p>\r\n<p><a href=\"/\">CONSPIRACY</a></p>\r\n<p><a href=\"/\">Transit Uomo</a></p>\r\n<p><a href=\"/\">Y-3</a></p>\r\n</td>\r\n<td style=\"width: 284px;\">\r\n<p><strong>FOOTWEAR</strong></p>\r\n<p><em><a href=\"/\">VIEW ALL</a></em></p>\r\n<p><a href=\"/\">Boots</a></p>\r\n<p><a href=\"/\">Lace-ups</a></p>\r\n<p><a href=\"/\">Loafers</a></p>\r\n<p><a href=\"/\">Sneakers</a></p>\r\n<p><a href=\"/\">Sandals</a></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>BAGS</strong></p>\r\n<p><em><a href=\"/\">VIEW ALL</a></em></p>\r\n<p><a href=\"/\">Backpacks</a></p>\r\n<p><a href=\"/\">Cases &amp; Wallets</a></p>\r\n<p><a href=\"/\">Shoulder</a></p>\r\n<p><a href=\"/\">bags</a></p>\r\n</td>\r\n<td style=\"width: 283px;\">\r\n<p><strong>ACCESSORIES</strong></p>\r\n<p><em><a href=\"/\">VIEW ALL</a></em></p>\r\n<p><a href=\"/\">Belts</a></p>\r\n<p><a href=\"/\">Gloves</a></p>\r\n<p><a href=\"/\">Hats</a></p>\r\n<p><a href=\"/\">Jewelry</a></p>\r\n<p><a href=\"/\">Scarves</a></p>\r\n<p><a href=\"/\">Sunglasses</a></p>\r\n<p><a href=\"/\">Perfumes</a></p>\r\n<p><a href=\"/\">Masks</a></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>','2020-10-04 10:40:07','2020-10-04 13:02:50',1);
 /*!40000 ALTER TABLE `cms_block` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3929,7 +3929,7 @@ CREATE TABLE `cms_block_store` (
 
 LOCK TABLES `cms_block_store` WRITE;
 /*!40000 ALTER TABLE `cms_block_store` DISABLE KEYS */;
-INSERT INTO `cms_block_store` VALUES (1,0),(2,1),(2,3),(3,1),(3,3),(4,1),(4,3),(5,1),(5,3),(6,1),(6,3),(7,1),(7,3),(8,0);
+INSERT INTO `cms_block_store` VALUES (1,0),(2,1),(2,3),(3,1),(3,3),(4,1),(4,3),(5,1),(5,3),(6,1),(6,3),(7,1),(7,3),(8,0),(9,0);
 /*!40000 ALTER TABLE `cms_block_store` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7148,7 +7148,7 @@ CREATE TABLE `media_content_asset` (
 
 LOCK TABLES `media_content_asset` WRITE;
 /*!40000 ALTER TABLE `media_content_asset` DISABLE KEYS */;
-INSERT INTO `media_content_asset` VALUES (2,'cms_block','3','content'),(3,'cms_block','3','content'),(4,'cms_block','3','content'),(1,'cms_block','8','content'),(5,'cms_page','2','content'),(6,'cms_page','2','content');
+INSERT INTO `media_content_asset` VALUES (2,'cms_block','3','content'),(3,'cms_block','3','content'),(4,'cms_block','3','content'),(1,'cms_block','8','content'),(7,'cms_block','9','content'),(5,'cms_page','2','content'),(6,'cms_page','2','content');
 /*!40000 ALTER TABLE `media_content_asset` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7176,7 +7176,7 @@ CREATE TABLE `media_gallery_asset` (
   UNIQUE KEY `MEDIA_GALLERY_ASSET_PATH` (`path`),
   KEY `MEDIA_GALLERY_ASSET_ID` (`id`),
   FULLTEXT KEY `MEDIA_GALLERY_ASSET_TITLE` (`title`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Media Gallery Asset';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Media Gallery Asset';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7185,7 +7185,7 @@ CREATE TABLE `media_gallery_asset` (
 
 LOCK TABLES `media_gallery_asset` WRITE;
 /*!40000 ALTER TABLE `media_gallery_asset` DISABLE KEYS */;
-INSERT INTO `media_gallery_asset` VALUES (1,'wysiwyg/footer-cards.png','footer-cards',NULL,'Local',NULL,'image/png',329,22,12488,'2020-10-01 12:06:24','2020-10-01 12:06:24'),(2,'wysiwyg/footer-face.png','footer-face',NULL,'Local',NULL,'image/png',35,35,3004,'2020-10-01 12:06:25','2020-10-01 12:06:25'),(3,'wysiwyg/footer-insta.png','footer-insta',NULL,'Local',NULL,'image/png',35,35,3399,'2020-10-01 12:06:26','2020-10-01 12:06:26'),(4,'wysiwyg/footer-logo.png','footer-logo',NULL,'Local',NULL,'image/png',149,47,4900,'2020-10-01 12:06:28','2020-10-01 12:06:28'),(5,'wysiwyg/shop-men.jpg','shop-men',NULL,'Local',NULL,'image/jpg',1095,1000,334697,'2020-10-01 12:06:29','2020-10-01 12:06:29'),(6,'wysiwyg/shop-women.jpg','shop-women',NULL,'Local',NULL,'image/jpg',1095,1000,345559,'2020-10-01 12:06:32','2020-10-01 12:06:32');
+INSERT INTO `media_gallery_asset` VALUES (1,'wysiwyg/footer-cards.png','footer-cards',NULL,'Local',NULL,'image/png',329,22,12488,'2020-10-01 12:06:24','2020-10-01 12:06:24'),(2,'wysiwyg/footer-face.png','footer-face',NULL,'Local',NULL,'image/png',35,35,3004,'2020-10-01 12:06:25','2020-10-01 12:06:25'),(3,'wysiwyg/footer-insta.png','footer-insta',NULL,'Local',NULL,'image/png',35,35,3399,'2020-10-01 12:06:26','2020-10-01 12:06:26'),(4,'wysiwyg/footer-logo.png','footer-logo',NULL,'Local',NULL,'image/png',149,47,4900,'2020-10-01 12:06:28','2020-10-01 12:06:28'),(5,'wysiwyg/shop-men.jpg','shop-men',NULL,'Local',NULL,'image/jpg',1095,1000,334697,'2020-10-01 12:06:29','2020-10-01 12:06:29'),(6,'wysiwyg/shop-women.jpg','shop-women',NULL,'Local',NULL,'image/jpg',1095,1000,345559,'2020-10-01 12:06:32','2020-10-01 12:06:32'),(7,'wysiwyg/menu-men.jpg','menu-men',NULL,'Local',NULL,'image/jpg',204,272,64758,'2020-10-04 11:34:33','2020-10-04 11:34:33');
 /*!40000 ALTER TABLE `media_gallery_asset` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12419,7 +12419,7 @@ CREATE TABLE `url_rewrite` (
   KEY `URL_REWRITE_TARGET_PATH` (`target_path`),
   KEY `URL_REWRITE_STORE_ID_ENTITY_ID` (`store_id`,`entity_id`),
   KEY `URL_REWRITE_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='Url Rewrites';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='Url Rewrites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -12428,7 +12428,7 @@ CREATE TABLE `url_rewrite` (
 
 LOCK TABLES `url_rewrite` WRITE;
 /*!40000 ALTER TABLE `url_rewrite` DISABLE KEYS */;
-INSERT INTO `url_rewrite` VALUES (1,'cms-page',1,'no-route','cms/page/view/page_id/1',0,1,NULL,1,NULL),(2,'cms-page',2,'home','cms/page/view/page_id/2',0,1,NULL,1,NULL),(3,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,1,NULL,1,NULL),(4,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,1,NULL,1,NULL),(5,'cms-page',1,'no-route','cms/page/view/page_id/1',0,2,NULL,1,NULL),(6,'cms-page',2,'home','cms/page/view/page_id/2',0,2,NULL,1,NULL),(7,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,2,NULL,1,NULL),(8,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,2,NULL,1,NULL),(9,'cms-page',1,'no-route','cms/page/view/page_id/1',0,3,NULL,1,NULL),(10,'cms-page',2,'home','cms/page/view/page_id/2',0,3,NULL,1,NULL),(11,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,3,NULL,1,NULL),(12,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,3,NULL,1,NULL),(13,'category',3,'men','catalog/category/view/id/3',0,1,NULL,1,NULL),(14,'category',3,'men','catalog/category/view/id/3',0,2,NULL,1,NULL),(15,'category',3,'men','catalog/category/view/id/3',0,3,NULL,1,NULL),(16,'category',4,'women','catalog/category/view/id/4',0,1,NULL,1,NULL),(17,'category',4,'women','catalog/category/view/id/4',0,2,NULL,1,NULL),(18,'category',4,'women','catalog/category/view/id/4',0,3,NULL,1,NULL),(19,'category',5,'sale','catalog/category/view/id/5',0,1,NULL,1,NULL),(20,'category',5,'sale','catalog/category/view/id/5',0,2,NULL,1,NULL),(21,'category',5,'sale','catalog/category/view/id/5',0,3,NULL,1,NULL);
+INSERT INTO `url_rewrite` VALUES (1,'cms-page',1,'no-route','cms/page/view/page_id/1',0,1,NULL,1,NULL),(2,'cms-page',2,'home','cms/page/view/page_id/2',0,1,NULL,1,NULL),(3,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,1,NULL,1,NULL),(4,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,1,NULL,1,NULL),(5,'cms-page',1,'no-route','cms/page/view/page_id/1',0,2,NULL,1,NULL),(6,'cms-page',2,'home','cms/page/view/page_id/2',0,2,NULL,1,NULL),(7,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,2,NULL,1,NULL),(8,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,2,NULL,1,NULL),(9,'cms-page',1,'no-route','cms/page/view/page_id/1',0,3,NULL,1,NULL),(10,'cms-page',2,'home','cms/page/view/page_id/2',0,3,NULL,1,NULL),(11,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,3,NULL,1,NULL),(12,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,3,NULL,1,NULL),(13,'category',3,'men','catalog/category/view/id/3',0,1,NULL,1,NULL),(14,'category',3,'men','catalog/category/view/id/3',0,2,NULL,1,NULL),(15,'category',3,'men','catalog/category/view/id/3',0,3,NULL,1,NULL),(16,'category',4,'women','catalog/category/view/id/4',0,1,NULL,1,NULL),(17,'category',4,'women','catalog/category/view/id/4',0,2,NULL,1,NULL),(18,'category',4,'women','catalog/category/view/id/4',0,3,NULL,1,NULL),(19,'category',5,'sale','catalog/category/view/id/5',0,1,NULL,1,NULL),(20,'category',5,'sale','catalog/category/view/id/5',0,2,NULL,1,NULL),(21,'category',5,'sale','catalog/category/view/id/5',0,3,NULL,1,NULL),(22,'category',6,'men/clothing','catalog/category/view/id/6',0,1,NULL,1,NULL),(23,'category',6,'men/clothing','catalog/category/view/id/6',0,2,NULL,1,NULL),(24,'category',6,'men/clothing','catalog/category/view/id/6',0,3,NULL,1,NULL);
 /*!40000 ALTER TABLE `url_rewrite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -13328,7 +13328,7 @@ UNLOCK TABLES;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY INVOKER */
+/*!50013 DEFINER=`inn7_mage`@`localhost` SQL SECURITY INVOKER */
 /*!50001 VIEW `inventory_stock_1` AS select distinct `legacy_stock_status`.`product_id` AS `product_id`,`legacy_stock_status`.`website_id` AS `website_id`,`legacy_stock_status`.`stock_id` AS `stock_id`,`legacy_stock_status`.`qty` AS `quantity`,`legacy_stock_status`.`stock_status` AS `is_salable`,`product`.`sku` AS `sku` from (`cataloginventory_stock_status` `legacy_stock_status` join `catalog_product_entity` `product` on(`legacy_stock_status`.`product_id` = `product`.`entity_id`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -13343,4 +13343,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-01 16:52:01
+-- Dump completed on 2020-10-04 16:10:12

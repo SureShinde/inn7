@@ -2,6 +2,7 @@
 body, .action.primary, input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"], p, .table{color: #222222;font-size: 15px;font-family: Roboto, sans-serif;}
 ._keyfocus *:focus, input:not([disabled]):focus, textarea:not([disabled]):focus, select:not([disabled]):focus{box-shadow: none;}
 .header.content a:hover{text-decoration:none}
+button:focus{outline: none;}
 .logo-block{text-align: center;}
 .logo{    float: none;display: inline-block;    margin: 0;}
 .logo img{    width: auto;}
@@ -23,6 +24,7 @@ body, .action.primary, input[type="text"], input[type="password"], input[type="u
     width: 27px;
     height: 30px;
 }
+.minicart-wrapper .action.showcart.active{    display: block;}
 .minicart-wrapper{color: #222222;}
 .minicart-wrapper .action.showcart:before,.minicart-wrapper .action.showcart.active:before{display:none}
 .page-header .switcher{    margin-left: 0;
@@ -61,4 +63,7 @@ body, .action.primary, input[type="text"], input[type="password"], input[type="u
     padding: 0;text-align: center;
 }
 .navigation .level0{    margin: 0;}
-.navigation{    max-width: 100%;}
+.navigation{    max-width: 100%;    position: static;}
+.navigation .level0.parent>.level-top>.ui-menu-icon{    display: none;}
+.navigation .level0{    position: static;}
+.navigation .level0:hover:after{display:none;}

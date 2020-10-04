@@ -1,4 +1,5 @@
-.navigation, .breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper>.widget, .page-wrapper>.page-bottom, .block.category.event, .top-container, .page-main{    max-width: 1430px;    padding-left: 0;padding-right: 0;}
+a,a:hover,a:visited{color:#282828}
+.breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper>.widget, .page-wrapper>.page-bottom, .block.category.event, .top-container, .page-main{    max-width: 1430px;    padding-left: 0;padding-right: 0;}
 .action.primary,.action.primary:hover,.action.primary:focus, .action.primary:active{    color: #fff;background: #282828;
     border:none;    padding: 0;    outline: none;}
 .action.primary:hover{opacity: 0.8;}
@@ -46,6 +47,7 @@ currency-block{    margin-top: 10px;}
     text-transform: uppercase;
     font-weight: normal;color: #fff;line-height: normal;padding: 10px 25px;border: 1px solid transparent;
     border-bottom: none;}
+.navigation .level0.parent>.level-top{padding: 10px 25px;}
 .navigation .level0>.level-top:hover, .navigation .level0>.level-top.ui-state-focus,.navigation .level0.active>.level-top, .navigation .level0.has-active>.level-top{    border-width: 1px 1px 0 1px;font-size: 14px;
     text-transform: uppercase;
     font-weight: normal;color: #fff;line-height: normal;border-color:#fff}
@@ -125,3 +127,18 @@ body.cms-index-index .page-main{max-width: 100%;    margin-bottom: 30px;}
 body.cms-index-index .page-main ul{    padding: 0;
     list-style: none;    margin: 0;}
 body.cms-index-index .page-main ul li{float:left;width: 50%}
+.navigation ul li.all-category-theme{display: none}
+.navigation ul.column-right{    top: 37px;
+    left: 0!important;
+    position: absolute;
+    right: 0;
+    background: #fff;display:none;}
+.navigation ul.sub-menu{    display: block!important;padding:20px 13.021vw;text-align: left;}
+.navigation ul.sub-menu table,.navigation ul.sub-menu table td{border:none}
+.navigation ul.sub-menu p{font-weight: normal;margin:0;font-size: 12px;}
+.navigation ul.sub-menu strong{font-weight:550}
+.navigation ul.sub-menu a{    font-size: 11px;
+    text-transform: uppercase;}
+.navigation ul.sub-menu em{font-style: normal;color:#888888;margin-bottom: 5px;display:block}
+.navigation ul.sub-menu em a{color:#888888}
+.navigation ul.sub-menu table,.navigation ul.sub-menu table{height: auto!important;}
