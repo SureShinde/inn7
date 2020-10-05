@@ -1,6 +1,6 @@
 -- MariaDB dump 10.17  Distrib 10.4.11-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: inn7
+-- Host: localhost    Database: inn7_mage
 -- ------------------------------------------------------
 -- Server version	10.4.11-MariaDB
 

@@ -1,6 +1,9 @@
+<?php
+$_helper = $this->helper('Oc\Theme\Helper\Data');
+?>
 <div class="theme-header">
 	<div class="header content">
-				<div class="col-md-4 col-sm-4 col-4 float-right">
+				<div class="col-md-4 col-sm-4 col-4 header-right float-right">
                         <div class="cart-login">
                             <?php echo $this->getChildHtml('cat-mini'); ?>
                             <div class="float-right"><?php echo $this->getChildHtml('minicart'); ?></div>
@@ -17,7 +20,11 @@
                             </div>
                             <div class="header-static float-right"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-shipping')->toHtml(); ?></div>
                         </div>
-                    <div class="se-block"><?php echo $this->getChildHtml('topSearch'); ?></div>
+                    <div class="se-block">
+                        <a href="javascript:void(0);" class="search-trig">&nbsp;</a>
+                        <a href="javascript:void(0);" class="menu-trig">&nbsp;</a>
+                        <?php echo $this->getChildHtml('topSearch'); ?>
+                    </div>
 				</div>
                 <div class="col-md-4 col-sm-4 col-4 logo-block float-right">
                     <?php echo $this->getChildHtml('logo'); ?>
@@ -34,6 +41,28 @@
 </div>
 <script type="text/javascript">
 	require(['jquery'],function($){
+	    var screenWidth = $( window ).width();
+        $('.search-trig').click(function() {
+            $(".se-block .block-search").animate({top: "0"});
+        });
+        $('.search-close').click(function() {
+            $(".se-block .block-search").animate({top: "100%"});
+        });
+        $('.menu-trig').click(function() {
+            $(".nav-sections").animate({left: "0"});
+        });
+        $('.menu-close').click(function() {
+            $(".nav-sections").animate({left: "-100%"});
+        });
+        $('.navigation .level0.parent').click(function() {
+            $(this).find("ul.column-right").addClass('active');
+        });
+        if(screenWidth<=1199){
+            $( ".navigation li.level0" ).each(function( index ) {
+                $(this).find('a.level-top').attr('href','javascript:void(0);');
+            });
+        }
+
 		$(document).scroll(function() {
 			if($(window).scrollTop() === 0) {
 				$('.page-header').removeClass('sticky-header');
