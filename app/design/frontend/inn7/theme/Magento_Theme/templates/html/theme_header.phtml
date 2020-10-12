@@ -53,6 +53,11 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
         });
         $('.menu-close').click(function() {
             $(".nav-sections").animate({left: "-100%"});
+            $("ul.column-right").removeClass('active');
+        });
+        $(document).on("click", ".navigation li.back",function(event) {
+            event.preventDefault();
+            $("ul.column-right").removeClass('active');
         });
         $('.navigation .level0.parent').click(function() {
             $(this).find("ul.column-right").addClass('active');
@@ -62,7 +67,11 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
                 $(this).find('a.level-top').attr('href','javascript:void(0);');
             });
         }
-
+        if(screenWidth<=767){
+            $( ".navigation ul.sub-menu table td p" ).click(function() {
+                $(this).parent().toggleClass('active');
+            });
+        }
 		$(document).scroll(function() {
 			if($(window).scrollTop() === 0) {
 				$('.page-header').removeClass('sticky-header');

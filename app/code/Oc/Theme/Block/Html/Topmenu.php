@@ -139,7 +139,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
             $additionalClass .= 'with-banner';
         }
         $html .= '<ul class="column-right">';
-        $html .= '<li class="ui-menu-item all-category-theme"><a href="'.$child->getUrl().'" class="show-all">'.__('לצפייה בכל המוצרים').' ></a></li>';
+            $html .= '<li class="back">'.$child->getName().'</li>';
         if($blockIdMainHtml){
             $html .= '<ul class="sub-menu">';
             $html .= $blockIdMainHtml;

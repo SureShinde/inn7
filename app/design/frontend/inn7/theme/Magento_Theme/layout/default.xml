@@ -17,6 +17,7 @@
 		<move element="logo" as="logo" destination="header-theme"/>
 		<move element="minicart" as="minicart" destination="header-theme"/>
         <move element="store.settings.currency" as="store.settings.currency" destination="header-theme"/>
+        <!--<move element="store.settings.currency" as="store.settings.currency.menu" destination="catalog.topnav"/>-->
 		<move element="page.top" destination="header.container" after="-"/>
 		<referenceContainer name="wishlist_sidebar" remove="true" />
 		<move element="breadcrumbs" destination="main" before="-" />

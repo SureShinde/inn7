@@ -39,20 +39,6 @@
 <div class="menu-bottom">
     <?php echo $this->getChildHtml('store.settings.currency'); ?>
 </div>
-<script type="text/javascript">
-	require(['jquery'],function($){
-		$(document).ready(function() {
-			var lis = $(".navigation .level0.submenu");
-			$(lis).each(function( index ) {
-				var wrap = $(this).find('li#wrap');
-				for(var i = 0; i < wrap.length; i+=6) {
-				  wrap.slice(i, i+6)
-					 .wrapAll("<li class='list_unstyled level1'><ul></ul></li>");
-				}
-			});
-		});
-	});
-</script>
 <script type="text/x-magento-init">
 {
 	"*": {
