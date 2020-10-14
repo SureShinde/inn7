@@ -68,7 +68,8 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
             });
         }
         if(screenWidth<=767){
-            $( ".navigation ul.sub-menu table td p" ).click(function() {
+            $(document).on("click", ".navigation ul.sub-menu table td p",function(event) {
+                event.preventDefault();
                 $(this).parent().toggleClass('active');
             });
         }

@@ -1,0 +1,87 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php $buttonTitle = __('Add to Cart'); ?>
+<?php if($chart = $_product->getSizeChart()): ?>
+<div class="size-chart">
+    <a class="chart-pop-link" href="#"><?= __('VIEW SIZE GUIDE') ?></a>
+    <div class="chart-pop" id="chart-pop" style="display: none">
+        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('chart-'.$chart)->toHtml(); ?>
+    </div>
+</div>
+    <script>
+        require(
+            [
+                'jquery',
+                'Magento_Ui/js/modal/modal'
+            ],
+            function(
+                $,
+                modal
+            ) {
+                var options = {
+                    type: 'popup',
+                    responsive: true,
+                    innerScroll: true,
+                    title: '',
+                    buttons: [{
+                        text: $.mage.__(''),
+                        class: '',
+                        click: function () {
+                            this.closeModal();
+                        }
+                    }]
+                };
+
+                var popupchart = modal(options, $('#chart-pop'));
+                $(".chart-pop-link").on('click',function(){
+                    $("#chart-pop").modal("openModal");
+                });
+            }
+        );
+    </script>
+<?php endif; ?>
+<div class="box-tocart product-item">
+	<?php if ($_product->isSaleable() && !$_product->getDiscontinued()): ?>
+    <div class="fieldset">
+		<div class="add-to-cart-block">
+			<?php if ($block->shouldRenderQuantity()): ?>
+			<div class="qty-block">
+						<input type="number"
+							   name="qty"
+							   id="qty"
+							   value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>"
+							   title="<?= /* @escapeNotVerified */ __('Qty') ?>"
+							   class="input-text qty"
+							   data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+							   />
+			</div>
+			<?php endif; ?>
+				<button type="submit"
+						title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
+						class="action primary tocart"
+						id="product-addtocart-button">
+					<span><?= /* @escapeNotVerified */ $buttonTitle ?></span>
+				</button>
+		</div>
+    </div>
+	<?php endif; ?>
+</div>
+<div class="under-add-to-cart">
+	<?= $block->getChildHtml('', true) ?>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>

@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceBlock name="reviews.tab" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceContainer name="content">
+            <container name="new.product.wrapper" htmlTag="div" htmlClass="product-top" />
+		</referenceContainer>
+		<move element="product.info.sku" destination="product.info.main" before="page.main.title"/>
+        <move element="product.info.main" destination="new.product.wrapper" after="product.info.media"/>
+		<move element="product.info.media" destination="new.product.wrapper" before="-"/>
+		<move element="catalog.product.related" destination="new.product.products" before="-"/>
+		<move element="recently_viewed" destination="new.product.products" after="-"/>
+    </body>
+</page>

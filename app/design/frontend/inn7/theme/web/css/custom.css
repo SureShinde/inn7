@@ -1,5 +1,9 @@
 a,a:hover,a:visited{color:#282828}
 .breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper>.widget, .page-wrapper>.page-bottom, .block.category.event, .top-container, .page-main{    max-width: 1430px;    padding-left: 0;padding-right: 0;}
+.breadcrumbs a,.breadcrumbs a:visited,.breadcrumbs a,.breadcrumbs .items{color: #565656;
+    font-size: 11px;
+    text-transform: uppercase;}
+.breadcrumbs .item:not(:last-child):after{    color: #565656;    font-size: 12px;    content: '/';    line-height: 13px;}
 .action.primary,.action.primary:hover,.action.primary:focus, .action.primary:active{    color: #fff;background: #282828;
     border:none;    padding: 0;    outline: none;}
 .action.primary:hover{opacity: 0.8;}
@@ -339,4 +343,97 @@ body.cms-index-index .page-main ul li{float:left;width: 50%;margin: 0;}
         background: #262626 url(../images/mobile-menu-arrow-left.png) 12px no-repeat;
         padding-left: 40px;}
     .navigation li.back a{color:#fff}
+    .nav-sections{    position: fixed;}
 }
+/*product*/
+body.catalog-product-view .page-main{max-width: 980px;}
+.page-layout-1column .product-info-main,.page-layout-1column .product.media{    width: 50%;    display: block;}
+.gallery-placeholder{width: 100%;}
+.page-layout-1column .product-info-main{padding-left: 45px;}
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus){    transform: translate3d(0, 0, 0);}
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus){    transform: translate3d(0, 0, 0);}
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr{opacity: 1;}
+.fotorama__arr, .fotorama__thumb__arr,.fotorama__arr:hover, .fotorama__thumb__arr:hover{background-color: transparent;}
+/*.fotorama__arr--next .fotorama__arr__arr{background: url(../images/gallery-right.png) 0 0 no-repeat;    width: 13px;height: 27px;}
+.fotorama__arr--next{    right: -20px;    width: 13px;}*/
+.fotorama__thumb-border{    border: 1px solid #cacaca;}
+fotorama__nav-wrap{margin-top: 20px;}
+.fotorama__nav--thumbs .fotorama__nav__frame{    padding-right: 10px!important;padding-left: 0!important;}
+.fotorama__thumb-border{display:none}
+.fotorama__nav-wrap{margin-top: 20px;}
+.zone-previous-next .back-categories{    display: none;}
+.previous-next-action{    border-bottom: 1px solid #dcdcdc;padding-bottom:10px;    float: left;width: 100%;}
+.previous-next-action .previous{float: left;}
+.previous-next-action .next{float: right;}
+.previous-next-action a{    font-size: 11px;text-transform: uppercase;color: #454545;}
+.previous-next-action a:after{    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    line-height: 20px;
+    color: inherit;
+    content: '\e608';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;    padding-right: 0;    padding-left: 10px;    margin-top: -2px;}
+.previous-next-action .previous:after{ content: '\e617';    padding-right: 10px;    padding-left: 0;float: left}
+.page-layout-1column .product-top .breadcrumbs{    margin: 0 0 10px;}
+.product-info-main .product.attribute.sku .type:after{content:":";}
+.product-info-main .product.attribute.sku{    font-size: 11px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;}
+.product-info-main .product.attribute.sku .type{    margin-right: 0;}
+.page-title-wrapper.product{    text-align: center;    margin-top: 15px;}
+.page-title-wrapper.product h1{    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;    margin-bottom: 5px;
+}
+.amshopby-option-link{    margin-right: 0;}
+.product-info-main .product-info-price{text-align: center;    border: none;}
+.product-info-main .product-info-price .price-label,.product-info-main .product-info-price .price-box .price-container>span.price-label{display:none!important;}
+.product-options-bottom .price-box .price-container .price, .product-info-price .price-box .price-container .price{    font-size: 20px;
+    line-height: normal;
+    color: #282828;
+    font-weight: 550;}
+.product-info-main .product-add-form{padding-top: 0;border-bottom: none;margin-bottom: 0;    text-align: center;}
+.product-info-main .product-info-price .price-box .price-container>span{margin-bottom: 0;}
+.product-options-bottom .price-box, .product-info-price .price-box{padding-bottom: 0;}
+.product-info-main .product-add-form .field.qty{display:none}
+.swatch-attribute-selected-option,.swatch-attribute-label{    display: none;}
+.swatch-option{    float: none;    display: inline-block;    margin: 0 10px;}
+.swatch-option.text{padding: 0;    margin-right: 0; margin: 0 10px;    padding: 0}
+.swatch-attribute.size .swatch-option, .swatch-attribute.manufacturer .swatch-option{    background: transparent;
+    color: #282828;
+    font-weight: normal;    border-color: #f5f5f5;
+    padding: 5px;
+    height: auto;}
+.swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected{background: #464547!important;
+    border: 1px solid #fff;
+    color: #fff;
+    outline: none;}
+.box-tocart .action.tocart:not(:last-child) {
+    margin-bottom: 0;
+}
+.box-tocart .action.tocart{    width: 80%;
+    margin: 0;
+    height: 40px;
+    padding: 0;    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;}
+.chart-pop table th{background-color: #e0e0de;}
+a.chart-pop-link{font-size: 13px;}
+.product-info-main .qty-block{display:none}
+.swatch-opt{    margin: 20px 0 0;}
+.product-options-wrapper .fieldset:last-child{    margin-bottom: 5px;}
+.swatch-attribute-options {
+    margin: 10px 0 0;
+}
+.product-social-links{text-align: center;}
+.product-social-links .action.towishlist{    font-weight: 500;font-size: 13px;margin-right: 0;color: #282828;}
+.box-tocart{margin-bottom: 0;}
+/*.product-social-links .action.towishlist:before{content: '\e601';}*/

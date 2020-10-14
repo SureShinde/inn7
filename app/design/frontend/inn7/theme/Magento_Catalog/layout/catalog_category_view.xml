@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<move element="breadcrumbs" destination="category.image.left" after="-" />
+		<move element="main" destination="category.wrap" after="-"/>
+		<move element="sidebar.main" destination="category.wrap" before="-"/>
+		<!--<move element="product_list_toolbar" destination="category.wrap" before="-" />-->
+		<referenceBlock name="page.main.title" remove="true" />
+		<referenceBlock name="category.product.addto.compare" remove="true" />
+		<referenceContainer name="product.info.review" remove="true" />
+		<referenceBlock name="amasty.shopby.applybutton.topnav" remove="true" />
+		<referenceBlock name="category.image" remove="true" />
+		<referenceBlock name="amshopby.catalog.topnav" remove="true" />
+        <referenceContainer name="columns.top">
+            <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
+                <block class="Magento\Catalog\Block\Category\View" name="category.description" template="Magento_Catalog::category/description.phtml">
+					<block class="Magento\Catalog\Block\Category\View" name="category.image.left" template="Magento_Catalog::category/image.phtml"/>
+				</block>
+            </container>
+        </referenceContainer>
+		<referenceContainer name="columns">
+			<container name="category.wrap" htmlTag="div" htmlClass="category-wrap" />
+		</referenceContainer>
+	</body>
+</page>

@@ -59,6 +59,8 @@ button:focus{outline: none;}
     margin-right: 20px;line-height: 17px;
 }
 .block-search .action.search.disabled, .block-search .action.search[disabled], fieldset[disabled] .block-search .action.search,.block-search .action.search:before{opacity: 1;}
+.nav-sections{position: relative;
+    z-index: 1000;}
 .nav-sections,.navigation{background: transparent;}
 .navigation ul {
     padding: 0;text-align: center;
@@ -122,3 +124,5 @@ button:focus{outline: none;}
     .block.newsletter .action.subscribe{    width: 100%;}
     .header.content a.logo{max-width: 100%;}
 }
+.modal-popup.modal-slide .modal-footer{    display: none;}
+.modal-header,.modal-content{border: none;}

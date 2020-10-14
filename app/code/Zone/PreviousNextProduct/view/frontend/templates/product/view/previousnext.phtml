@@ -1,0 +1,21 @@
+<?php
+    /*
+     * Copyright © 2019 Zekinah Lecaros. All rights reserved.
+     * zjlecaros@gmail.com
+     */
+    $productId = $block->getProduct()->getId();
+    $category_ids = $block->getProduct()->getCategoryIds();
+    $_previous = $block->getPrevProduct($productId,$category_ids);
+    $_next = $block->getNextProduct($productId,$category_ids);
+    $category = $block->getCurrentCategory($category_ids);
+?>
+<div class="zone-previous-next">
+    <div class="previous-next-action">
+        <?php if($_previous): ?>
+            <a href="<?php print_r($_previous->getProductUrl()); ?>" title="<?php print_r($_previous->getName()); ?>" class="previous"><span><?php echo __('Previous'); ?></span></a>
+        <?php endif; ?>
+        <?php if($_next): ?>
+            <a href="<?php print_r($_next->getProductUrl()); ?>" title="<?php print_r($_next->getName()); ?>" class="next"><span><?php echo __('Next'); ?></span></a>
+        <?php endif; ?>
+    </div>
+</div>

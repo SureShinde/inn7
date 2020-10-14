@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page>
+    <body>
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceContainer name="product.info.media">
+            <block class="Oc\Theme\Block\Crumbblock" name="crumbs" before="-" as="crumbs" template="Oc_Theme::crumbs.phtml" />
+        </referenceContainer>
+    </body>
+</page>
