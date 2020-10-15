@@ -347,20 +347,20 @@ body.cms-index-index .page-main ul li{float:left;width: 50%;margin: 0;}
 }
 /*product*/
 body.catalog-product-view .page-main{max-width: 980px;}
-.page-layout-1column .product-info-main,.page-layout-1column .product.media{    width: 50%;    display: block;}
+.page-layout-1column .product-info-main,.page-layout-1column .product.media{    width: 50%;    display: block;    position: relative;}
 .gallery-placeholder{width: 100%;}
 .page-layout-1column .product-info-main{padding-left: 45px;}
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus){    transform: translate3d(0, 0, 0);}
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus){    transform: translate3d(0, 0, 0);}
 .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr{opacity: 1;}
 .fotorama__arr, .fotorama__thumb__arr,.fotorama__arr:hover, .fotorama__thumb__arr:hover{background-color: transparent;}
-/*.fotorama__arr--next .fotorama__arr__arr{background: url(../images/gallery-right.png) 0 0 no-repeat;    width: 13px;height: 27px;}
-.fotorama__arr--next{    right: -20px;    width: 13px;}*/
+.fotorama__arr--next .fotorama__arr__arr{background: url(../images/gallery-right.png) 0 0 no-repeat;    width: 13px;height: 27px;}
+.fotorama__arr--next{    right: -20px;    width: 13px;}
 .fotorama__thumb-border{    border: 1px solid #cacaca;}
 fotorama__nav-wrap{margin-top: 20px;}
 .fotorama__nav--thumbs .fotorama__nav__frame{    padding-right: 10px!important;padding-left: 0!important;}
 .fotorama__thumb-border{display:none}
-.fotorama__nav-wrap{margin-top: 20px;}
+.fotorama__nav-wrap{margin-top: 40px;}
 .zone-previous-next .back-categories{    display: none;}
 .previous-next-action{    border-bottom: 1px solid #dcdcdc;padding-bottom:10px;    float: left;width: 100%;}
 .previous-next-action .previous{float: left;}
@@ -437,3 +437,9 @@ a.chart-pop-link{font-size: 13px;}
 .product-social-links .action.towishlist{    font-weight: 500;font-size: 13px;margin-right: 0;color: #282828;}
 .box-tocart{margin-bottom: 0;}
 /*.product-social-links .action.towishlist:before{content: '\e601';}*/
+.slider-count{display: none;    position: absolute;
+    bottom: 105px;
+    right: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #505050;}
