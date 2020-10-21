@@ -1,0 +1,48 @@
+<?php
+$_product = $block->getProduct();
+$_helper = $this->helper(Magento\Catalog\Helper\Output::class);
+?>
+<div class="accordion">
+        <?php if($_product->getDescription()): ?>
+            <div class="tab">
+                <div data-role="collapsible Specifications" class="title">
+                    <div data-role="trigger">
+                        <h4><?php echo __('Details'); ?></h4>
+                    </div>
+                </div>
+                <div data-role="content"  style="display:none" class="content">
+                    <div class="item"><?php echo $_product->getShortDescription(); ?></div>
+                    <div class="item"><?php echo $_product->getDescription(); ?></div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if($_product->getModelSize()): ?>
+            <div class="tab">
+                <div data-role="collapsible" class="title">
+                    <div data-role="trigger">
+                        <h4><?php echo __('Design and Fit'); ?></h4>
+                    </div>
+                </div>
+                <div data-role="content" style="display:none" class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($_product->getAttributeText('model_size'))->toHtml(); ?></div>
+            </div>
+        <?php endif; ?>
+            <div class="tab">
+                <div data-role="collapsible" class="title">
+                    <div data-role="trigger">
+                        <h4><?php echo __('Shipping and Returns'); ?></h4>
+                    </div>
+                </div>
+                <div data-role="content" style="display:none" class="content"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shipping_returns')->toHtml(); ?></div>
+            </div>
+            <?php echo $this->getChildHtml('product.info.upsell'); ?>
+</div>
+<script>
+    require(['jquery'],function($){
+        $(".accordion .title").click(function () {
+            $('.accordion .content').hide();
+            $('.accordion .title').removeClass('active');
+            $(this).parent().find('.content').show();
+            $(this).addClass('active');
+        });
+    });
+</script>
