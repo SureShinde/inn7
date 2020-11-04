@@ -1,0 +1,12 @@
+<script type="text/x-magento-init">
+    {
+        ".product-item-info .product-image-container img.product-image-photo": {
+            "Magenest_CatalogImageHovering/js/animation": {
+                "animationType": "<?= $block->getAnimationJsName()?>",
+                "duration": <?= $block->getDuration(); ?>,
+                "easingFunction": "<?= $block->getEasingFunction(); ?>",
+                "hoverElement": "<?= $block->getHoverElement();?>"
+            }
+        }
+    }
+</script>

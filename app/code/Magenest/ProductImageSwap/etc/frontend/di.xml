@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Block\Product\ImageBuilder">
+        <plugin name="magenest_productimageswap_block_product_imagebuilder"
+                type="Magenest\ProductImageSwap\Plugin\Magento\Catalog\Block\Product\ImageBuilder" sortOrder="50"/>
+    </type>
+
+    <type name="Magento\Catalog\Block\Product\ImageFactory">
+        <plugin name="magenest_productimageswap_block_product_imagefactory"
+                type="Magenest\ProductImageSwap\Plugin\Magento\Catalog\Block\Product\ImageFactory" sortOrder="50"/>
+    </type>
+
+    <type name="Magento\Framework\View\Element\AbstractBlock">
+        <plugin name="ignore_escape_html_attributes" type="Magenest\ProductImageSwap\Plugin\Magento\Catalog\Block\Product\Image" sortOrder="0" />
+    </type>
+</config>

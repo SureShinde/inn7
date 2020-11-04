@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceBlock name="page.main.title" remove="true" />
+		<move element="checkout.cart.coupon" destination="cart.summary" before="checkout.cart.shipping" />
+		<move element="checkout.cart.amgiftcard" destination="cart.summary" after="checkout.cart.coupon" />
+		<move element="cart.summary" destination="checkout.cart.container" after="checkout.cart.form"/>
+		<!--<referenceContainer name="content">
+			<block class="Magento\Framework\View\Element\Template" name="cart_cross" after="checkout.cart.totals.container" template="Magento_Checkout::cart/cross.phtml"/>
+		</referenceContainer>-->
+    </body>
+</page>

@@ -6,10 +6,12 @@
                 <argument name='template' xsi:type='string'>WeltPixel_OwlCarouselSlider::product/list/items.phtml</argument>
             </action>
         </referenceBlock>
+        <!--
         <referenceBlock name="product.info.upsell">
             <action method="setTemplate" ifconfig="weltpixel_owl_carousel_config/upsell_products/status">
                 <argument name='template' xsi:type='string'>WeltPixel_OwlCarouselSlider::product/list/items.phtml</argument>
             </action>
         </referenceBlock>
+        -->
     </body>
 </page>

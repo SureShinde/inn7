@@ -1,0 +1,15 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Checkout\Block\Onepage\Failure */
+?>
+<div class="container" style="padding-top: 30px;">
+<?php if ($error = $block->getErrorMessage()) :?>
+    <p><?= $block->escapeHtml($error) ?></p>
+<?php endif ?>
+<h1>ארעה שגיאה</h1>
+<span>כרטיסך לא חויב</span>
+</div>

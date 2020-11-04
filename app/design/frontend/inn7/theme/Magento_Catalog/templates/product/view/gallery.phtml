@@ -27,7 +27,11 @@ $mainImageData = $mainImage ?
     $helper->getDefaultPlaceholderUrl('image');
 
 ?>
-
+<div class="product-gallery">
+<div class="slider-main-arrows">
+    <div class="arrow-right"><img src="<?php echo $block->getViewFileUrl('images/gallery-right.png'); ?>" /></div>
+    <div class="arrow-left"><img src="<?php echo $block->getViewFileUrl('images/gallery-left.png'); ?>" /></div>
+</div>
 <div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder">
     <img
         alt="main product photo"
@@ -36,6 +40,7 @@ $mainImageData = $mainImage ?
     />
 </div>
 <div class="slider-count"><span class="count"></span> <?php echo __('Of'); ?> <span class="total"></span></div>
+</div>
 <script type="text/x-magento-init">
     {
         "[data-gallery-role=gallery-placeholder]": {

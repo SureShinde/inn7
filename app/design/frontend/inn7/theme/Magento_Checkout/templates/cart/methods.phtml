@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+$quote = $block->getTotalsCache();
+$SubTotal = $quote['subtotal']->getData('value');
+$minShip = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_checkout/checkout/minimumshipping');
+/** @var $block \Magento\Checkout\Block\Cart */
+//var_dump($block->getMethods('top_methods'));
+?>
+<?php if (!$block->hasError()): ?>
+<?php $methods = $block->getMethods('methods') ?: $block->getMethods('top_methods') ?>
+<?php //if($SubTotal<$minShip): ?>
+	<!--<div class="cart-extra-top">
+		<?php //$missing = $minShip-$SubTotal; ?>
+		<div class="ship-notice"><?php //echo __('You need to add'); ?> <?php //echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($missing,true,false); ?> <b><?php //echo __('for free shipping'); ?></b></div>	
+	</div>-->
+<?php //endif; ?>
+<ul class="checkout methods items checkout-methods-items">
+<?php foreach ($methods as $method): ?>
+    <?php $methodHtml = $block->getMethodHtml($method); ?>
+    <?php if (trim($methodHtml) !== ''): ?>
+    <li class="item"><?= /* @escapeNotVerified */ $methodHtml ?></li>
+    <?php endif; ?>
+<?php endforeach; ?>
+	<li><img src="<?php echo $this->getViewFileUrl('images/Payments.png'); ?>" /></li>
+</ul>
+<?php endif; ?>
+<div class="cart-extra-bottom">
+	<div class="cart-shipping-block">
+		<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('cart-below-totals')->toHtml(); ?>
+	</div>
+</div>

@@ -322,15 +322,17 @@ define([
                     $('.slider-count span.count').text(index);
                 });
                 $('.slider-count span.total').text(fotorama.size);
-                $('.slider-count').show();
-
+                if(fotorama.size>1) {
+                    $('.slider-count').show();
+                    $('.slider-main-arrows').show();
+                }
                 //custom arrows click
-                $( ".product-info-main .product.attribute.sku .value" ).on( "click", function() {
+                $( ".slider-main-arrows .arrow-right" ).on( "click", function() {
                     fotorama.show('>');
                     var select = $(".fotorama__nav--thumbs .fotorama__nav__frame[data-active^='true']").attr('current-index');
                     $('.slider-count span.count').text(select);
                 });
-                $( ".page-title-wrapper.product h1" ).on( "click", function() {
+                $( ".slider-main-arrows .arrow-left" ).on( "click", function() {
                     fotorama.show('<');
                     var select = $(".fotorama__nav--thumbs .fotorama__nav__frame[data-active^='true']").attr('current-index');
                     $('.slider-count span.count').text(select);

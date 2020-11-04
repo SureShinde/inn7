@@ -4,13 +4,29 @@
         <referenceBlock name="product.info.review" remove="true" />
         <referenceBlock name="product.info.stock.sku" remove="true"/>
         <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="product.info.details" remove="true" />
+        <referenceBlock name="product.info.overview" remove="true" />
         <referenceContainer name="content">
             <container name="new.product.wrapper" htmlTag="div" htmlClass="product-top" />
 		</referenceContainer>
+        <referenceContainer name="content">
+            <container name="additional.product.wrapper" htmlTag="div" htmlClass="additional-products" after="-" />
+        </referenceContainer>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product_attr" template="Magento_Catalog::product/view/attr.phtml" after="-" />
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Magento\Reports\Block\Product\Viewed" after="product.info.details" name="recently_viewed" template="Magento_Reports::widget/viewed/content/viewed_grid.phtml">
+                <action method="setPageSize">
+                    <argument name="page_size" xsi:type="number">4</argument>
+                </action>
+            </block>
+        </referenceContainer>
 		<move element="product.info.sku" destination="product.info.main" before="page.main.title"/>
         <move element="product.info.main" destination="new.product.wrapper" after="product.info.media"/>
 		<move element="product.info.media" destination="new.product.wrapper" before="-"/>
-		<move element="catalog.product.related" destination="new.product.products" before="-"/>
 		<move element="recently_viewed" destination="new.product.products" after="-"/>
+        <move element="product.info.upsell" destination="product_attr" after="-" />
+        <move element="catalog.product.related" destination="new.product.wrapper" after="-"/>
     </body>
 </page>

@@ -13,20 +13,20 @@
                 <height>140</height>
             </image>
             <image id="cart_cross_sell_products" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="cart_page_product_thumbnail" type="small_image">
-                <width>165</width>
-                <height>165</height>
+                <width>600</width>
+                <height>800</height>
             </image>
             <image id="category_page_grid" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>600</width>
+                <height>800</height>
             </image>
             <image id="category_page_grid-1" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>600</width>
+                <height>800</height>
             </image>
             <image id="category_page_list" type="small_image">
                 <width>240</width>
@@ -53,12 +53,12 @@
                 <height>100</height>
             </image>
             <image id="mini_cart_product_thumbnail" type="thumbnail">
-                <width>150</width>
-                <height>150</height>
+                <width>800</width>
+                <height>800</height>
             </image>
             <image id="new_products_content_widget_grid" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
                 <width>270</width>
@@ -87,8 +87,8 @@
             </image>
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">
-                <width>240</width>
-                <height>300</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="product_swatch_image_small" type="thumbnail">
                 <width>69</width>
@@ -119,8 +119,8 @@
                 <height>75</height>
             </image>
             <image id="recently_compared_products_grid_content_widget" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="recently_compared_products_images_names_widget" type="thumbnail">
                 <width>75</width>
@@ -135,8 +135,8 @@
                 <height>340</height>
             </image>
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="recently_viewed_products_images_names_widget" type="small_image">
                 <width>75</width>
@@ -147,12 +147,12 @@
                 <height>76</height>
             </image>
             <image id="recently_viewed_products_list_content_widget" type="small_image">
-                <width>270</width>
-                <height>340</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="related_products_list" type="small_image">
-                <width>152</width>
-                <height>190</height>
+                <width>245</width>
+                <height>328</height>
             </image>
             <image id="review_page_product_image" type="small_image">
                 <width>285</width>
@@ -175,8 +175,8 @@
                 <height>90</height>
             </image>
             <image id="upsell_products_list" type="small_image">
-                <width>152</width>
-                <height>190</height>
+                <width>95</width>
+                <height>127</height>
             </image>
             <image id="wishlist_sidebar_block" type="thumbnail">
                 <width>75</width>

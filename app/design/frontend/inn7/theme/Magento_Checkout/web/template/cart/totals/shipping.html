@@ -1,0 +1,21 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!-- ko if: isCalculated() -->
+<tr class="totals shipping excl">
+    <th class="mark" colspan="1" scope="row" data-bind="text: title + ' (' + getShippingMethodTitle() + ')'"></th>
+    <td class="amount">
+        <span class="price" data-bind="text: getValue()"></span>
+    </td>
+</tr>
+<!-- /ko -->
+<!-- ko ifnot: isCalculated() -->
+<tr class="totals shipping empty excl">
+    <td class="amount">
+        <span class="price" data-bind="i18n: 'Without Shipping Amount'"></span>
+    </td>
+</tr>
+<!-- /ko -->

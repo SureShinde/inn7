@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="200">
+            <label>Magenest</label>
+        </tab>
+        <section id="catalog_image_hovering" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Catalog Image Hovering</label>
+            <tab>magenest</tab>
+            <resource>Magenest_CatalogImageHovering::config_catalog_image_hovering</resource>
+            <group id="general" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="default" translate="label" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default hovered image</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Automatically set the second product image as the hovered catalog image</comment>
+                </field>
+                <field id="animation" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Animation</label>
+                    <source_model>Magenest\CatalogImageHovering\Model\Config\Source\Animation</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="duration" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Duration (seconds)</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment>Duration of the animation</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                        <field id="animation" negative="1">0</field>
+                    </depends>
+                </field>
+                <field id="easing_function" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Easing</label>
+                    <comment>Easing Function</comment>
+                    <source_model>Magenest\CatalogImageHovering\Model\Config\Source\EasingFunction</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                        <field id="animation" negative="1">0</field>
+                    </depends>
+                </field>
+                <field id="hover_element" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Animation starts when hovering over</label>
+                    <source_model>Magenest\CatalogImageHovering\Model\Config\Source\HoverElement</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

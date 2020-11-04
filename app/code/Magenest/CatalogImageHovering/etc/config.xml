@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog_image_hovering>
+            <general>
+                <enabled>1</enabled>
+                <default>1</default>
+                <animation>0</animation>
+                <duration>0.3</duration>
+                <easing_function>ease-in-out</easing_function>
+                <hover_element>image</hover_element>
+            </general>
+        </catalog_image_hovering>
+    </default>
+</config>

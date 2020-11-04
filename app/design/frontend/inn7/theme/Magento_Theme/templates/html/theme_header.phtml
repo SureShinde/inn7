@@ -62,15 +62,13 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
         $('.navigation .level0.parent').click(function() {
             $(this).find("ul.column-right").addClass('active');
         });
-        if(screenWidth<=1199){
-            $( ".navigation li.level0" ).each(function( index ) {
-                $(this).find('a.level-top').attr('href','javascript:void(0);');
-            });
-        }
         if(screenWidth<=767){
             $(document).on("click", ".navigation ul.sub-menu table td p",function(event) {
                 event.preventDefault();
                 $(this).parent().toggleClass('active');
+            });
+            $( ".navigation li.level0" ).each(function( index ) {
+                $(this).find('a.level-top').attr('href','javascript:void(0);');
             });
         }
 		$(document).scroll(function() {

@@ -12,7 +12,7 @@
 <?php $buttonTitle = __('Add to Cart'); ?>
 <?php if($chart = $_product->getSizeChart()): ?>
 <div class="size-chart">
-    <a class="chart-pop-link" href="#"><?= __('VIEW SIZE GUIDE') ?></a>
+    <a class="chart-pop-link" href="javascript:void(0);"><?= __('VIEW SIZE GUIDE') ?></a>
     <div class="chart-pop" id="chart-pop" style="display: none">
         <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('chart-'.$chart)->toHtml(); ?>
     </div>
