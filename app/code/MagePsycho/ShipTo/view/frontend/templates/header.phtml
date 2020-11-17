@@ -1,0 +1,27 @@
+<?php
+/** @var \MagePsycho\ShipTo\Block\Header $block */
+?>
+<div class="shipto-switcher <?= $block->getCustomClass() ?>" data-bind="scope: 'shipto'">
+    <?= __('Ship To:') ?>
+    <!-- ko if: shipto().country  -->
+    <span class="shipto-country"
+          data-bind="text: new String(shipto().country)">
+    </span>
+    <!-- /ko -->
+    <!-- ko ifnot: shipto().country  -->
+        <!-- if there's no country set -->
+    <!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "shipto": {
+                        "component": "MagePsycho_ShipTo/js/view/shipto"
+                    }
+                }
+            }
+        }
+    }
+</script>

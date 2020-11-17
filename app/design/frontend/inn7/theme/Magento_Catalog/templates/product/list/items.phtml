@@ -121,7 +121,7 @@ switch ($type = $block->getType()) {
             $class = $type;
 
             $image = 'cart_cross_sell_products';
-            $title = __('More Choices:');
+            $title = __('We found other products you might like!');
             $items = $block->getItems();
 
             $showAddTo = false;
@@ -176,7 +176,7 @@ $_item = null;
         <?php endif; ?>
         <?php else:?>
             <?php if ($type != 'upsell'):?>
-                <div class="block aaaa <?= $block->escapeHtmlAttr($class) ?>">
+                <div class="block <?= $block->escapeHtmlAttr($class) ?>">
             <?php else:?>
                     <div class="tab">
             <?php endif; ?>

@@ -1,0 +1,19 @@
+<?php
+/** @var \MagePsycho\ShipTo\Block\Popup $block */
+?>
+<div id="shiptoPopup" data-bind="scope:'shiptoPopup'" style="display: none;">
+    <script>
+        window.shiptoPopup = <?= /* @noEscape */ $block->getSerializedConfig() ?>;
+    </script>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#shiptoPopup": {
+                "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+            },
+            "*": {
+                "Magento_Ui/js/block-loader": "<?= $block->escapeJs($block->escapeUrl($block->getViewFileUrl('images/loader-1.gif'))) ?>"
+            }
+        }
+    </script>
+</div>

@@ -83,3 +83,21 @@ echo $block->getSummaryCount();
 		});
 	});
 </script>
+<script>
+    require(['jquery','slick-min'],function($){
+        $(document).ready(function () {
+            if ($(window).width() < 767) {
+                $('.block.crosssell .product-items').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    centerMode: true,
+                    variableWidth: true,
+                    arrows: false,
+                    dots:false
+                });
+            }
+        });
+    });
+</script>

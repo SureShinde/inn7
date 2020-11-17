@@ -39,6 +39,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 <script>
     require(['jquery'],function($){
         $(".accordion .title").click(function () {
+            ///$(this).parent().slideDown( "slow", function() );
             $('.accordion .content').hide();
             $('.accordion .title').removeClass('active');
             $(this).parent().find('.content').show();
@@ -49,11 +50,16 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 <script>
     require(['jquery','slick-min'],function($){
         $(document).ready(function () {
-            if ($(window).width() < 600) {
-                $('.product-items').slick({
+            if ($(window).width() < 767) {
+                $('.block.related .product-items').slick({
+                    dots: true,
                     infinite: true,
-                    slidesToShow: 3,
-                    slidesToScroll: 3
+                    speed: 300,
+                    slidesToShow: 1,
+                    centerMode: true,
+                    variableWidth: true,
+                    arrows: false,
+                    dots:false
                 });
             }
         });

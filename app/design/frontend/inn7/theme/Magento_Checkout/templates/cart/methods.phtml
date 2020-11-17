@@ -19,7 +19,7 @@ $minShip = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_checkout/checkou
 <?php //if($SubTotal<$minShip): ?>
 	<!--<div class="cart-extra-top">
 		<?php //$missing = $minShip-$SubTotal; ?>
-		<div class="ship-notice"><?php //echo __('You need to add'); ?> <?php //echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($missing,true,false); ?> <b><?php //echo __('for free shipping'); ?></b></div>	
+		<div class="ship-notice"><?php //echo __('You need to add'); ?> <?php //echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($missing,true,false); ?> <b><?php //echo __('for free shipping'); ?></b></div>
 	</div>-->
 <?php //endif; ?>
 <ul class="checkout methods items checkout-methods-items">
@@ -29,7 +29,7 @@ $minShip = $this->helper('Oc\Theme\Helper\Data')->getConfig('oc_checkout/checkou
     <li class="item"><?= /* @escapeNotVerified */ $methodHtml ?></li>
     <?php endif; ?>
 <?php endforeach; ?>
-	<li><img src="<?php echo $this->getViewFileUrl('images/Payments.png'); ?>" /></li>
+	<!--<li><img src="<?php //echo $this->getViewFileUrl('images/Payments.png'); ?>" /></li>-->
 </ul>
 <?php endif; ?>
 <div class="cart-extra-bottom">

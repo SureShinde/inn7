@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   MagePsycho
+ * @package    MagePsycho_ShipTo
+ * @author     Raj KB <magepsycho@gmail.com>
+ * @website    https://www.magepsycho.com
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="MagePsycho\ShipTo\Block\Popup" name="shipto-popup" as="shipto-popup" template="MagePsycho_ShipTo::popup.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="shiptoPopup" xsi:type="array">
+                                <item name="component" xsi:type="string">MagePsycho_ShipTo/js/view/popup</item>
+                                <item name="children" xsi:type="array">
+                                    <item name="messages" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Ui/js/view/messages</item>
+                                        <item name="displayArea" xsi:type="string">messages</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="header-theme">
+            <block class="MagePsycho\ShipTo\Block\Header" name="shipto_switcher_link" as="shipto_switcher_link" />
+        </referenceBlock>
+        <!--<referenceContainer name="header.panel">
+            <block class="MagePsycho\ShipTo\Block\Header" name="shipto_switcher_link" as="shipto_switcher_link" before="-" />
+        </referenceContainer>-->
+    </body>
+</page>

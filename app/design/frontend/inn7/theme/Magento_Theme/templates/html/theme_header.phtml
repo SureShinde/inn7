@@ -31,7 +31,7 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
                 </div>
 				<div class="col-md-4 col-sm-4 col-4 float-right">
                     <div class="currency-block float-left">
-                        <?php //echo $this->getChildHtml('store.settings.language'); ?>
+                        <?php echo $this->getChildHtml('shipto_switcher_link'); ?>
                         <div class="panel wrapper">
                             <?php echo $this->getChildHtml('store.settings.currency'); ?>
                         </div>
@@ -49,10 +49,10 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
             $(".se-block .block-search").animate({top: "100%"});
         });
         $('.menu-trig').click(function() {
-            $(".nav-sections").animate({left: "0"});
+            $(".nav-sections").stop().animate({left: "0"});
         });
         $('.menu-close').click(function() {
-            $(".nav-sections").animate({left: "-100%"});
+            $(".nav-sections").animate({left: "-110%"});
             $("ul.column-right").removeClass('active');
         });
         $(document).on("click", ".navigation li.back",function(event) {
@@ -65,10 +65,16 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
         if(screenWidth<=767){
             $(document).on("click", ".navigation ul.sub-menu table td p",function(event) {
                 event.preventDefault();
+                event.stopPropagation();
                 $(this).parent().toggleClass('active');
             });
             $( ".navigation li.level0" ).each(function( index ) {
-                $(this).find('a.level-top').attr('href','javascript:void(0);');
+                var item = $(this).find('p');
+                $(item).addClass('ui-menu-item');
+            });
+            $( ".navigation li.parent.level0" ).each(function( index ) {
+                var item = $(this).find('a.level-top');
+                $(item).attr('href','javascript:void(0);');
             });
         }
 		$(document).scroll(function() {
