@@ -39,11 +39,15 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 <script>
     require(['jquery'],function($){
         $(".accordion .title").click(function () {
-            ///$(this).parent().slideDown( "slow", function() );
-            $('.accordion .content').hide();
-            $('.accordion .title').removeClass('active');
-            $(this).parent().find('.content').show();
-            $(this).addClass('active');
+            if($(this).hasClass('active')){
+                $(this).parent().find('.content').slideUp("slow");
+                $(this).removeClass('active');
+            }else {
+                $('.accordion .title').removeClass('active');
+                $('.accordion .content').slideUp("slow");
+                $(this).parent().find('.content').slideDown("slow");
+                $(this).addClass('active');
+            }
         });
     });
 </script>

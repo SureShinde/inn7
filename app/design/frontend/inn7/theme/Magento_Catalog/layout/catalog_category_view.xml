@@ -19,6 +19,7 @@
         <move element="catalog.leftnav" destination="category.product.list.additional" before="-"/>
         <referenceContainer name="columns.top">
             <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
+                <block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml"/>
                 <block class="Magento\Catalog\Block\Category\View" name="category.description" template="Magento_Catalog::category/description.phtml">
 					<block class="Magento\Catalog\Block\Category\View" name="category.image.left" template="Magento_Catalog::category/image.phtml"/>
 				</block>
