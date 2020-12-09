@@ -1,22 +1,20 @@
 <?php
-$faqCount = 1; 
+$faqCount = 1;
 $faqCountMax = $this->helper('Oc\Theme\Helper\Data')->getConfig('general_oc/main_group/faqCount');
 ?>
 <div class="faq">
-	<div class="col-md-10 float-right no-padding">
 		<ul>
-			<?php while ($faqCount <= $faqCountMax): ?>	
+			<?php while ($faqCount <= $faqCountMax): ?>
 				<li>
 					<?php $iden = 'faq_'.$faqCount; ?>
 					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($iden)->toHtml(); ?>
 				</li>
 				<?php $faqCount++; ?>
 			<?php endwhile; ?>
-		</ul>	
-	</div>
+		</ul>
 </div>
 <script type="text/javascript">
-	require(['jquery', 'jquery'], function($){ 
+	require(['jquery', 'jquery'], function($){
 		$( '.faq ul li h4' ).click(function() {
 			$('.faq ul li').removeClass('active');
 			$(this).parent().addClass('active');

@@ -4,7 +4,7 @@ $urlP = strtok($path, '?');
 $Cpath = str_replace('/', '', $urlP);
 ?>
 <div class="side_menu">
-	<div class="menu-title"><?php echo __('Additional info'); ?></div>
+    <div class="menu-title"><span><?php echo __('Menu'); ?></span></div>
 	<div class="side_menu_content">
 		<div class="mat-links-box">
 			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('static_bar')->toHtml(); ?>
@@ -24,12 +24,12 @@ $Cpath = str_replace('/', '', $urlP);
 			var subEL = $(this).next('.side_menu_content');
 			if(subEL.is(':hidden')){
 			subEL.slideDown();
-				$(this).addClass('active');				
+				$(this).addClass('active');
 			}
 			else{
 				subEL.slideUp();
-				$(this).removeClass('active');		
-			}	
+				$(this).removeClass('active');
+			}
 		});
-	});	
+	});
 </script>

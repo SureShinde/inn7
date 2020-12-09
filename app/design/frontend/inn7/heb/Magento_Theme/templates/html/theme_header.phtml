@@ -14,11 +14,10 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
                                         <a href="<?php echo $block->getBaseUrl(); ?>customer/account/" data-bind="text: customer().fullname"></a>
                                     <!-- /ko -->
                                     <!-- ko ifnot: customer().fullname  -->
-                                    <a href="<?php echo $block->getBaseUrl(); ?>customer/account/" data-bind="i18n:'My Area'"></a>
+                                    <a href="<?php echo $block->getBaseUrl(); ?>customer/account/" data-bind="i18n:'אזור אישי'"></a>
                                     <!-- /ko -->
                                 </div>
                             </div>
-                            <div class="header-static float-right"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-shipping')->toHtml(); ?></div>
                         </div>
                     <div class="se-block">
                         <a href="javascript:void(0);" class="search-trig">&nbsp;</a>
@@ -38,6 +37,7 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
                         <div class="panel wrapper">
                          <?php echo $this->getChildHtml('store.settings.language'); ?>
                         </div>
+                        <div class="header-static float-right"><?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-shipping')->toHtml(); ?></div>
                     </div>
 				</div>
 	</div>
@@ -52,10 +52,10 @@ $_helper = $this->helper('Oc\Theme\Helper\Data');
             $(".se-block .block-search").animate({top: "100%"});
         });
         $('.menu-trig').click(function() {
-            $(".nav-sections").stop().animate({left: "0"});
+            $(".nav-sections").stop().animate({right: "0"});
         });
         $('.menu-close').click(function() {
-            $(".nav-sections").animate({left: "-110%"});
+            $(".nav-sections").animate({right: "-110%"});
             $("ul.column-right").removeClass('active');
         });
         $(document).on("click", ".navigation li.back",function(event) {

@@ -25,7 +25,7 @@
 		<move element="product.info.sku" destination="product.info.main" before="page.main.title"/>
         <move element="product.info.main" destination="new.product.wrapper" after="product.info.media"/>
 		<move element="product.info.media" destination="new.product.wrapper" before="-"/>
-		<move element="recently_viewed" destination="new.product.products" after="-"/>
+		<!--<move element="recently_viewed" destination="new.product.products" after="-"/>-->
         <move element="product.info.upsell" destination="product_attr" after="-" />
         <move element="catalog.product.related" destination="new.product.wrapper" after="-"/>
     </body>

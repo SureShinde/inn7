@@ -7,15 +7,12 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-		<referenceContainer name="page.top">
-			<referenceBlock name="breadcrumbs" remove="true" />
-		</referenceContainer>
 		<move element="page.main.title" destination="content" before="-"/>
         <referenceContainer name="content">
             <block class="Magento\Cms\Block\Page" name="cms_page"/>
         </referenceContainer>
 		<referenceContainer name="sidebar.additional">
-			<block class="Magento\Framework\View\Element\Template" name="right-bar" template="Magento_Cms::html/right-bar.phtml"/>	
-		</referenceContainer>			
+			<block class="Magento\Framework\View\Element\Template" name="right-bar" template="Magento_Cms::html/right-bar.phtml"/>
+		</referenceContainer>
     </body>
 </page>

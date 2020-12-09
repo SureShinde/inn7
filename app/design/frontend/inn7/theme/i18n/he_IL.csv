@@ -3709,8 +3709,8 @@ Reverted,Reverted,module,Magento_CompanyCredit
 "Invalid value of ""%value"" provided for the %fieldName field.","Invalid value of ""%value"" provided for the %fieldName field.",module,Magento_CompanyCredit
 "Please enter a valid %1/%2 currency rate.","Please enter a valid %1/%2 currency rate.",module,Magento_CompanyCredit
 "Invoice created for %1","Invoice created for %1",module,Magento_CompanyCredit
-"The selected credit currency is not valid. 
-                        Customers will not be able to place orders until you update the credit currency.","The selected credit currency is not valid. 
+"The selected credit currency is not valid.
+                        Customers will not be able to place orders until you update the credit currency.","The selected credit currency is not valid.
                         Customers will not be able to place orders until you update the credit currency.",module,Magento_CompanyCredit
 "Store Credit","Store Credit",module,Magento_CompanyCredit
 "Refund to Company Credit","Refund to Company Credit",module,Magento_CompanyCredit
@@ -7139,9 +7139,9 @@ No,לא,module,Magento_LayeredNavigation
 "Use in Layered Navigation","שימוש בפילטור הניווט",module,Magento_LayeredNavigation
 "Can be used only with catalog input type Yes/No, Dropdown, Multiple Select and Price","Can be used only with catalog input type Yes/No, Dropdown, Multiple Select and Price",module,Magento_LayeredNavigation
 "Can be used only with catalog input type Yes/No, Dropdown, Multiple Select and Price.
-                    <br>Price is not compatible with <b>'Filterable (no results)'</b> option - 
+                    <br>Price is not compatible with <b>'Filterable (no results)'</b> option -
                      it will make no affect on Price filter.","Can be used only with catalog input type Yes/No, Dropdown, Multiple Select and Price.
-                    <br>Price is not compatible with <b>'Filterable (no results)'</b> option - 
+                    <br>Price is not compatible with <b>'Filterable (no results)'</b> option -
                      it will make no affect on Price filter.",module,Magento_LayeredNavigation
 "Use in Search Results Layered Navigation","השתמש בתוצאות החיפוש בפילטור הניווט",module,Magento_LayeredNavigation
 "Can be used only with catalog input type Yes/No, Dropdown, Multiple Select and Price.","Can be used only with catalog input type Yes/No, Dropdown, Multiple Select and Price.",module,Magento_LayeredNavigation
@@ -8071,7 +8071,7 @@ ID,ID,module,Magento_NegotiableQuote
 "The product that was requested doesn't exist. Verify the product and try again.","The product that was requested doesn't exist. Verify the product and try again.",module,Magento_NegotiableQuoteSharedCatalog
 "Shared Catalog (or Customer Group)","Shared Catalog (or Customer Group)",module,Magento_NegotiableQuoteSharedCatalog
 "No New Relic Application ID configured, cannot continue with Cron Event reporting","אין יישום אשר הוגדר באמצעות מזהה חדש, אין אפשרות להמשיך עם דיווח אירוע ה-Cron",module,Magento_NewRelicReporting
-"The New Relic integration requires the newrelic-php5 agent, which is not installed. More 
+"The New Relic integration requires the newrelic-php5 agent, which is not installed. More
                         information on installing the agent is available <a target=""_blank"" href=""%1"">here</a>.","האינגרציה של השריד החדש מחייב את newrelic-php5 agent, אשר אינו מותקן. מידע נוסף על התקנת הagent זמין <a target=""_blank"" href=""%1""> כאן</a>.",module,Magento_NewRelicReporting
 "New Relic Reporting Section","סעיף השריד עבור דיווח חדש",module,Magento_NewRelicReporting
 "New Relic Reporting","דיווח שריד חדש",module,Magento_NewRelicReporting
@@ -11991,17 +11991,17 @@ exception,exception,module,Magento_SharedCatalog
 "Delete ""${ $.$data.name }""","Delete ""${ $.$data.name }""",module,Magento_SharedCatalog
 "Catalog and Tier Price","Catalog and Tier Price",module,Magento_SharedCatalog
 "Group or Catalog","Group or Catalog",module,Magento_SharedCatalog
-"You must enable the <a href=""%1"" data-role=""notification-dialog"">shared catalog</a> feature in 
+"You must enable the <a href=""%1"" data-role=""notification-dialog"">shared catalog</a> feature in
         Stores -> Configuration -> B2B Features to use the shared catalogs in the storefront.
-        Otherwise, the categories and products you're configuring in shared catalogs will 
-        not be restricted to customers.","You must enable the <a href=""%1"" data-role=""notification-dialog"">shared catalog</a> feature in 
+        Otherwise, the categories and products you're configuring in shared catalogs will
+        not be restricted to customers.","You must enable the <a href=""%1"" data-role=""notification-dialog"">shared catalog</a> feature in
         Stores -> Configuration -> B2B Features to use the shared catalogs in the storefront.
-        Otherwise, the categories and products you're configuring in shared catalogs will 
+        Otherwise, the categories and products you're configuring in shared catalogs will
         not be restricted to customers.",module,Magento_SharedCatalog
-"You must enable the shared catalog feature in Stores -> Configuration -> B2B Features 
-    to use the shared catalogs in the storefront. Otherwise, the categories and products you're 
-    configuring in shared catalogs will not be restricted to customers.","You must enable the shared catalog feature in Stores -> Configuration -> B2B Features 
-    to use the shared catalogs in the storefront. Otherwise, the categories and products you're 
+"You must enable the shared catalog feature in Stores -> Configuration -> B2B Features
+    to use the shared catalogs in the storefront. Otherwise, the categories and products you're
+    configuring in shared catalogs will not be restricted to customers.","You must enable the shared catalog feature in Stores -> Configuration -> B2B Features
+    to use the shared catalogs in the storefront. Otherwise, the categories and products you're
     configuring in shared catalogs will not be restricted to customers.",module,Magento_SharedCatalog
 Next,Next,module,Magento_SharedCatalog
 "Edit Configurations","Edit Configurations",module,Magento_SharedCatalog
@@ -14825,3 +14825,58 @@ Footer,"תחתית הדף",theme,frontend/Magento/luma
 "Try searching for an item that is less specific.","נסה לחפש פריט שהוא פחות ספציפי."
 "You can always narrow your search results later","תמיד תוכלו לצמצם את תוצאות החיפוש אחר כך."
 "My Account","החשבון שלי"
+"My Area","איזור אישי"
+"VIEW SIZE GUIDE","צפייה בטבלת מידות"
+"Of","מתוך"
+"Design and Fit","מידות פריט"
+"Shipping and Returns","משלוחים והחזרות"
+"WEAR IT WITH","יכול להתאים עם..."
+"Let me know when its back to stock","עדכן אותי שפריט זה חוזר למלאי"
+"Your Email Address...","כתובת אימייל..."
+"Send","שליחה"
+"Item in Cart","פריטים בסל"
+"HOW DID YOU GET HERE?","איך הגעת לכאן?"
+"This is really rare...","זה ממש נדיר..."
+"You are now logged out.","התנתקת בהצלחה"
+"SIGN IN","התחברות"
+"ALREADY HAVE AN ACCOUNT?","כבר יש לך חשבון?"
+"WELCOME BACK!","ברוך הבא!"
+"REGISTER","הרשמה"
+"NEW?","חדש פה?"
+"CREATE AN ACCOUNT","צור חשבון"
+"Your order # is:","מספר ההזמנה שלך הוא:"
+"THANK YOU","תודה"
+"for shopping at INN7","שרכשת בINN7"
+"You are with us for <b>%1</b> days","את/ה לקוח/ה שלנו <b>%1</b> ימים"
+"You are with us for <b>%1</b> day","את/ה לקוח/ה שלנו <b>%1</b> יום"
+"Number of completed orders is <b>%1</b>","מספר הזמנות שביצעת <b>%1</b>"
+"Average order value is <b>%1</b>","ממוצע ההזמנו <b>%1</b>"
+"Order amount is <b>%1</b>","סה""כ ערך ההזמנות <b>%1</b>"
+"Total:","סה""כ:"
+"This Month:","החודש הזה:"
+"Number of completed orders is <b>%1</b>","מספר הזמנות שביצעת <b>%1</b>"
+"Average order value is <b>%1</b>","ממוצע ההזמנו <b>%1</b>"
+"Order amount is <b>%1</b>","סה""כ ערך ההזמנות <b>%1</b>"
+"Last Month:","חודש אחורה:"
+"Number of completed orders was <b>%1</b>","מספר הזמנות שביצעת <b>%1</b>"
+"Average order value was <b>%1</b>","ממוצע ההזמנו <b>%1</b>"
+"Order amount was <b>%1</b>","סה""כ ערך ההזמנות <b>%1</b>"
+"Loyalty Program","תכנית נאמנות"
+"Return","החזרת פריט"
+"My Returns","ההחזרות שלי"
+"Customer name","שם לקוח"
+"Choose Items","בחירת פריטים"
+"Please do not forget to take a picture of the goods from all sides. Request without such photos may not be approved","נא לא לשכוח לצלם את הפריט מכל צד. לא בטוח שבקשות ללא תמונה יאושרו"
+" Please, describe the issue in details.","אנא תאר/י את הסיבה להחזר "
+"Attach File","בחירת תמונה"
+"I have read and accept the %1Return Policy%2","קראתי והסכמתי  %1לתנאי ההחזר%2"
+"Submit Request","שליחת בקשה"
+"New Return for Order #%1","בקשת החזר פריט עבור הזמנה #%1"
+"My Returns Requests","החזרות"
+"Create new return request","יצירת בקשה להחזר פריט"
+"You have placed no return request.","אין בקשות להחזרים"
+"Item Condition","מצב הפריט"
+"Return Resolution","סיבת ההחזרה"
+"Return Qty","כמות"
+"Please choose","נא לבחור"
+"View","צפייה"
